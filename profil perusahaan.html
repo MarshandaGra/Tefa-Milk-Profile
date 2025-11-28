@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Perusahaan - TEFA MILK</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="profil perusahaan.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container-fluid px-4">
+            <img src="https://c.animaapp.com/uBMnkFhc/img/logo-politeknik-negeri-jember-200x200-1-3@2x.png"
+                alt="Logo Politeknik" class="navbar-logo">
+            <a class="navbar-brand ms-3" href="#">TEFA MILK</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Profil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Katalog Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Galeri Milk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Mitra Kerjasama</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="banner">
+            <img src="Tefa milk.png" alt="Banner Image" class="banner-img">
+            <div class="banner-text">
+                <h1>Tentang TEFA Milk</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sejarah Section -->
+
+<section class="content-section">
+    <h2 class="section-title">SEJARAH</h2>
+    <p class="section-content">
+        TEFA Milk lahir dari kompetensi, keterampilan, dan bidang keahlian sumber daya manusia di Politeknik
+        Negeri Jember (Polije). Di Polije terdapat dua jurusan yang beririsan erat dengan olahan pangan, yaitu
+        Teknologi dan Teknologi Pertanian.
+    </p>
+
+    <div id="sejarahFull" style="display: none; margin-top: 20px;">
+        <p class="section-content">
+            Jurusan Peternakan memfokus pada olahan pangan hewani, serta susu. Jurusan Teknologi Pertanian berat
+            dengan produk olahan susu. Kepaduan TEFA Milk juga menapatkan respons terhadap kebutuhan industri
+            pengolahan susu khususnya produk susu pereh yang kerap menghadapi kendala terkait standarnya untuk
+            masuk ke industri. Polije memberikan dukungan penuh untuk membuat TEFA Milk mampu menghasilkan
+            produk berkualitas tinggi dengan dukungan mesin produksi. Meskipun TEFA Milk juga memproduksi susu
+            untuk memenuhi kebutuhan pasar, fokus utama tetap sebagai fasilitas pembelajaran dan praktikum
+            mahasiswa.
+        </p>
+    </div>
+
+    <button class="read-more-btn" onclick="toggleContent('sejarahFull')">Baca Lebih Banyak</button>
+</section>
+
+<script>
+    function toggleContent(id) {
+        const content = document.getElementById(id);
+        const button = event.target;
+
+        if (content.style.display === "none") {
+            content.style.display = "block";
+            button.textContent = "Baca Lebih Sedikit";
+        } else {
+            content.style.display = "none";
+            button.textContent = "Baca Lebih Banyak";
+        }
+    }
+</script>
+
+        <!-- Vision Mission -->
+        <div class="vm-container">
+            <div class="vm-box1">
+                <h3>VISI</h3>
+                <p class="section-content">
+                    TEFA Milk memiliki tujuan untuk memproduksi bahan pangan olahan susu yang berkualitas dan
+                    terstandar. "Berkualitas" berarti produk yang dihasilkan terjamin mutunya, tidak terkontaminasi,
+                    serta aman dikonsumsi. "Terstandar" berarti melalui berbagai tahapan sertifikasi, seperti halal,
+                    SNI, dan BPOM.
+                </p>
+            </div>
+            <div class="vm-box">
+                <h3>MISI</h3>
+                <div class="vm-placeholder">
+                    MISI MASIH BELUM ADA
+                </div>
+            </div>
+        </div>
+    </section>
+
+<title>Struktur Organisasi</title>
+<title>Struktur Organisasi</title>
+
+<!-- Bootstrap CSS dari CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Link ke file CSS eksternal (cara terbaik) -->
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- SECTION STRUKTUR ORGANISASI -->
+    <section class="org-section">
+
+        <!-- Judul Section -->
+        <h2 class="section-title">Struktur Organisasi</h2>
+        <p class="section-subtitle">Company Structure Diagram</p>
+
+        <!-- Container Utama: Diagram (kiri) + Carousel (kanan) -->
+        <div class="org-content">
+
+            <!-- ==================== BAGIAN KIRI: DIAGRAM ==================== -->
+            <div class="diagram-container">
+                <img src="struktur tefa.jpg" alt="Company Structure Diagram">
+            </div>
+
+            <!-- ==================== BAGIAN KANAN: CAROUSEL ==================== -->
+            <div class="leaders-carousel-container">
+
+                <!-- Bootstrap Carousel -->
+                <div id="leadersCarousel" class="carousel slide" data-bs-ride="carousel">
+
+                    <!-- Indicators: Titik-titik navigasi di bawah -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#leadersCarousel" data-bs-slide-to="0"
+                            class="active"></button>
+                        <button type="button" data-bs-target="#leadersCarousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#leadersCarousel" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#leadersCarousel" data-bs-slide-to="3"></button>
+                    </div>
+
+                    <!-- Carousel Inner: Wadah semua slide -->
+                    <div class="carousel-inner">
+
+                        <!-- SLIDE 1: CEO -->
+                        <div class="carousel-item active">
+                            <div class="leader-card">
+                                <img src="penanggung jawab.jpg" alt="CEO" class="leader-img">
+                                <h3 class="leader-title">CEO</h3>
+                                <p class="leader-role">Penanggung Jawab</p>
+                            </div>
+                        </div>
+
+                        <!-- SLIDE 2: Leader 1 -->
+                        <div class="carousel-item">
+                            <div class="leader-card">
+                                <img src="perusahaan 1.jpg" alt="Leader 1" class="leader-img">
+                                <h3 class="leader-title">Leader 1</h3>
+                                <p class="leader-role">Perusahaan 1</p>
+                            </div>
+                        </div>
+
+                        <!-- SLIDE 3: Leader 2 -->
+                        <div class="carousel-item">
+                            <div class="leader-card">
+                                <img src="perusahaan 2.jpg" alt="Leader 2" class="leader-img">
+                                <h3 class="leader-title">Leader 2</h3>
+                                <p class="leader-role">Perusahaan 2</p>
+                            </div>
+                        </div>
+
+                        <!-- SLIDE 4: Leader 3 -->
+                        <div class="carousel-item">
+                            <div class="leader-card">
+                                <img src="perusahaan 3.jpg" alt="Leader 3" class="leader-img">
+                                <h3 class="leader-title">Leader 3</h3>
+                                <p class="leader-role">Perusahaan 3</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Carousel Controls: Tombol Prev & Next -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#leadersCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#leadersCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <!-- End Carousel -->
+
+            </div>
+            <!-- End Carousel Container -->
+
+        </div>
+        <!-- End Org Content -->
+
+    </section>
+    <!-- End Section -->
+
+    <!-- Bootstrap JavaScript Bundle (diperlukan untuk carousel) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container py-5">
+            <div class="row">
+                <!-- About Section -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <img src="https://c.animaapp.com/uBMnkFhc/img/logo-footer@2x.png" alt="Logo Footer"
+                        class="footer-logo mb-3">
+                    <p class="footer-text">Tefa Milk Polije adalah unit produksi susu milik Politeknik Negeri Jember yang
+                        berbasis Teaching Factory, sehingga pendidikan dikombinasikan dengan praktik industri
+                        nyata.<br><br>Mahasiswa terlibat langsung dalam proses produksi, pengemasan, hingga pemasaran produk
+                        susu siap konsumsi.</p>
+                </div>
+    
+                <!-- TEFA MILK Info -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-heading mb-4">TEFA MILK</h5>
+                    <div class="footer-info">
+                        <h6 class="info-title">Kantor Pusat</h6>
+                        <p class="info-text">Jl. Mastrip, Krajan Timur, Sumbersari, Kec. Sumbersari, Kabupaten Jember, Jawa
+                            Timur 68121</p>
+                        <h6 class="info-title mt-3">Jam Operasional</h6>
+                        <p class="info-text mb-1">Senin - Jumat : 07.30 - 17.00</p>
+                        <p class="info-text">Sabtu - Minggu : Tutup</p>
+                    </div>
+                </div>
+    
+                <!-- Menu -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-heading mb-4">MENU UTAMA</h5>
+                    <ul class="footer-menu">
+                        <li><a href="#">Beranda</a></li>
+                        <li><a href="#">Profil</a></li>
+                        <li><a href="#">Katalog Produk</a></li>
+                        <li><a href="#">Galeri Milk</a></li>
+                        <li><a href="#">Mitra Kerjasama</a></li>
+                        <li><a href="#">Kontak</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Social Media -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="footer-heading mb-4">SOSIAL MEDIA</h5>
+                    <ul class="footer-social">
+                        <li>
+                            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-youtube"></i> Youtube</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-whatsapp"></i> Whatsapp</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <div class="container">
+                <p class="text-center mb-0 py-3">2025 TEFA MILK. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="profil perusahaan.js"></script>
+</body>
+
+</html>
