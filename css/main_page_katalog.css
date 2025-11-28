@@ -3,13 +3,23 @@ body {
 }
 
 .hero {
-    background: url('img/header-bg.png') no-repeat center/cover;
-    padding: 180px 0 150px;
+    background: url('../image/header-bg.png') no-repeat center/cover !important;
+    padding: 160px 0 100px;
     color: #000;
+    z-index: 99999999;
 }
 
 .hero-title {
     font-size: 2.2rem;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
 }
 
 .filter-btn {

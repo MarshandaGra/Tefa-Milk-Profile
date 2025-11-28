@@ -1,19 +1,15 @@
-/* ========== IMPORT FONT ========== */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap');
-
-/* ========== GLOBAL FONT ========== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Inter", sans-serif !important;
+    font-family: "Poppins", sans-serif !important;
 }
 
 h1, h2, h3, h4, h5, h6,
 .navbar-brand,
 .section-title,
 .footer-heading {
-    font-family: "Montserrat", sans-serif !important;
+    font-family: "Poppins", sans-serif !important;
 }
 
 /* ========== ORIGINAL CSS KAMU ========== */
@@ -21,94 +17,6 @@ h1, h2, h3, h4, h5, h6,
 body {
     background: #f9f9f9;
     color: #333;
-}
-
-/* NAVBAR */
-.navbar {
-  background-color: #FAF3D6;
-  padding: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-logo {
-  width: 30px;
-  height: 30px;
-  object-fit: cover;
-}
-
-.navbar-brand {
-  font-weight: 600;
-  font-size: 28px;
-  color: #000000;
-  margin-left: 1rem;
-}
-
-.navbar-nav .nav-link {
-  font-weight: 600;
-  font-size: 20px;
-  color: #000000;
-  padding: 0.5rem 1rem;
-  transition: all 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #E4947D;
-}
-
-.navbar-nav .nav-link.active {
-  color: #000000;
-  border-bottom: 4px solid #E4947D;
-}
-
-/* navbar lebih ke kiri */
-header .container {
-    width: 78%;
-    margin-left: 4%;
-}
-
-.container {
-    width: 90%;
-    margin: auto;
-}
-
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-nav a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-}
-
-nav a:hover {
-    color: #4CAF50;
-}
-/* Hapus background default bootstrap */
-.navbar {
-    background-color: transparent !important;
-    box-shadow: none !important;
-}
-
-/* Transparan saat di atas */
-.custom-navbar {
-    background: rgba(255, 255, 255, 0) !important;
-    transition: 0.3s ease;
-}
-
-/* Warna muncul saat scroll */
-.custom-navbar.scrolled {
-    background: #FAF3D6 !important;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 /* HERO */
@@ -162,13 +70,14 @@ nav a:hover {
 .hero-btn-primary {
     background: #f5e6c8;
     color: #2d2a26;
-    padding: 12px 30px;
+    padding: 15px 35px;
     border-radius: 10px;
     border: none;
     font-size: 1.1rem;
     font-weight: 700;
     cursor: pointer;
     transition: 0.3s ease;
+    margin-right: 5px;
 }
 
 .hero-btn-primary:hover {
@@ -191,6 +100,7 @@ nav a:hover {
 .hero-btn-outline:hover {
     background: #ffffff;
     color: #2d2a26;
+    transform: scale(1.05);
 }
 
 /* button produk */

@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Poppins', Helvetica, Arial, sans-serif;
+    font-family: 'Poppins', sans-serif, Arial, sans-serif;
     background-color: #faf3d6;
     overflow-x: hidden;
     line-height: 1.6;
@@ -19,48 +19,10 @@ body {
     padding: 0 20px;
 }
 
-/* Navbar */
-.navbar {
-  background-color: #FAF3D6;
-  padding: 1rem 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-logo {
-  width: 30px;
-  height: 30px;
-  object-fit: cover;
-}
-
-.navbar-brand {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 24px;
-  color: #000000;
-  margin-left: 1rem;
-}
-
-.navbar-nav .nav-link {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  color: #000000;
-  padding: 0.5rem 1rem;
-  transition: all 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #E4947D;
-}
-
-.navbar-nav .nav-link.active {
-  color: #000000;
-  border-bottom: 4px solid #E4947D;
-}
 /* Hero Section */
 .hero-section {
     position: relative;
-    height: 400px;
+    height: 360px;
     background: linear-gradient(
         180deg,
         rgba(250, 243, 214, 1) 0%,
@@ -104,26 +66,26 @@ body {
 }
 
 .hero-title {
-    font-family: "Poppins", Helvetica;
+    font-family: "Poppins", sans-serif;
     font-weight: 700;
     color: #000000;
-    font-size: 48px;
+    font-size: 2.5rem;
     text-shadow: 0px 2px 8px #00000040;
     margin-bottom: 16px;
 }
 
 .hero-subtitle {
-    font-family: "Poppins", Helvetica;
+    font-family: "Poppins", sans-serif;
     font-weight: 400;
     color: #000000;
-    font-size: 32px;
+    font-size: 1.2rem;
     text-shadow: 0px 2px 15px #00000040;
     line-height: 1.4;
 }
 
 /* Sections */
 .section {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
     padding: 0;
 }
 
@@ -139,21 +101,23 @@ body {
 }
 
 .section-title {
-    font-family: "Poppins", Helvetica;
+    font-family: "Poppins", sans-serif;
     font-weight: 700;
     color: #000000;
-    font-size: 36px;
+    font-size: 30px;
     text-align: left;
+    padding-top: 23px;
 }
 
 .view-more-btn {
-    width: 211px;
+    width: 215px;
     height: 55px;
+    padding: 5px 20px;
     background-color: #e7a74e;
     border-radius: 25px;
     box-shadow: 0px 2px 5px #00000040;
     border: none;
-    font-family: "Roboto", Helvetica;
+    font-family: "Poppins", sans-serif;
     font-weight: 700;
     color: #ffffff;
     font-size: 24px;
@@ -208,8 +172,8 @@ body {
 
 .gallery-item {
     flex-shrink: 0;
-    width: 530px;
-    height: 339px;
+    width: 400px;
+    height: 250px;
     border-radius: 8px;
     object-fit: cover;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -315,7 +279,7 @@ body {
 }
 
 .testimonial-author {
-    font-family: "Poppins", Helvetica;
+    font-family: "Poppins", sans-serif;
     font-weight: 700;
     color: #000000;
     font-size: 24px;
@@ -330,7 +294,7 @@ body {
     right: 20px;
     width: 79px;
     opacity: 0.5;
-    font-family: "Roboto", Helvetica;
+    font-family: "Poppins", sans-serif;
     font-weight: 400;
     color: #000000;
     font-size: 15px;
@@ -346,7 +310,7 @@ body {
 }
 
 .testimonial-text {
-    font-family: "Roboto", Helvetica;
+    font-family: "Poppins", sans-serif;
     font-weight: 400;
     color: #000000;
     font-size: 16px;
@@ -357,7 +321,7 @@ body {
 
 .testimonial-read-more {
     opacity: 0.5;
-    font-family: "Roboto", Helvetica;
+    font-family: "Poppins", sans-serif;
     font-weight: 400;
     color: #000000;
     font-size: 16px;
@@ -396,7 +360,7 @@ body {
 }
 
 .footer-text {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 16px;
   color: #000000;
@@ -412,7 +376,7 @@ body {
 }
 
 .footer-info .info-title {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 16px;
   color: #000000;
@@ -421,7 +385,7 @@ body {
 }
 
 .footer-info .info-text {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
   font-size: 16px;
   color: #000000;
@@ -439,7 +403,7 @@ body {
 }
 
 .footer-menu li a {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 16px;
   color: #000000;
@@ -462,7 +426,7 @@ body {
 }
 
 .footer-social li a {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 16px;
   color: #000000;
@@ -488,7 +452,7 @@ body {
 }
 
 .footer-bottom p {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 16px;
   color: #000000;
