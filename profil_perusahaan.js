@@ -1,11 +1,4 @@
-// ===================================
-// FILE JAVASCRIPT UNTUK PROFIL PERUSAHAAN
-// ===================================
 
-// ===================================
-// 1. TOGGLE CONTENT FUNCTION
-//    Fungsi untuk tombol "Baca Lebih Banyak"
-// ===================================
 function toggleContent(id) {
     const content = document.getElementById(id);
     const btn = event.target;
@@ -19,10 +12,6 @@ function toggleContent(id) {
     }
 }
 
-// ===================================
-// 2. SMOOTH SCROLL ANIMATION
-//    Untuk navigasi yang smooth
-// ===================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -35,10 +24,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ===================================
-// 3. INTERSECTION OBSERVER
-//    Untuk animasi fade-in saat scroll
-// ===================================
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -61,20 +46,3 @@ document.querySelectorAll('.content-section, .org-section').forEach(section => {
     observer.observe(section);
 });
 
-// ===================================
-// 4. NAVBAR SCROLL EFFECT
-//    Navbar berubah saat di-scroll
-// ===================================
-window.addEventListener('scroll', function () {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.boxShadow = '0 5px 15px rgba(0,0,0,0.2)';
-    } else {
-        navbar.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
-    }
-});
-
-// ===================================
-// 5. CONSOLE LOG (untuk testing)
-// ===================================
-console.log('Script Profil Perusahaan TEFA MILK loaded successfully!');

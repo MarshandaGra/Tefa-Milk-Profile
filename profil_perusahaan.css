@@ -1,11 +1,3 @@
-/* ===================================
-   FILE CSS UNTUK PROFIL PERUSAHAAN
-   Nama File: style-profil.css
-   =================================== */
-
-/* ===================================
-   RESET DEFAULT STYLE
-   =================================== */
 * {
     margin: 0;
     padding: 0;
@@ -16,9 +8,6 @@ body {
     font-family: 'Poppins', Arial, sans-serif;
     background-color: white;
 }
-/* ===================================
-    HERO SECTION
-   =================================== */
 .hero-section {
     margin: 0;
     padding: 0;
@@ -46,9 +35,6 @@ body {
             font-weight: 700;
             margin-bottom: 20px;
         }
-/* ===================================
-   CONTENT SECTION (SEJARAH, VISI MISI)
-   =================================== */
 .content-section {
     background-color: white;
     padding: 50px;
@@ -131,29 +117,6 @@ body {
     color: #666;
     font-style: italic;
 }
-
-/* ===================================
-   STYLE.CSS - FILE CSS TERPISAH
-   =================================== */
-
-/* Reset dan Base Styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f5f7fa;
-    margin: 0;
-    padding: 0;
-}
-
-/* ===================================
-   SECTION STRUKTUR ORGANISASI
-   =================================== */
-
 .org-section {
     max-width: 100%;
     width: 100%;
@@ -182,10 +145,6 @@ body {
     font-size: 0.95rem;
 }
 
-/* ===================================
-   LAYOUT HORIZONTAL (FLEXBOX)
-   =================================== */
-
 .org-content {
     display: flex;
     align-items: flex-start;
@@ -196,10 +155,6 @@ body {
     margin-right: auto;
     padding: 0 20px;
 }
-
-/* ===================================
-   BAGIAN KIRI: DIAGRAM STRUKTUR
-   =================================== */
 
 .diagram-container {
     flex: 1;
@@ -214,11 +169,6 @@ body {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
-
-/* ===================================
-   BAGIAN KANAN: CAROUSEL LEADERS
-   =================================== */
-
 .leaders-carousel-container {
     flex: 1;
     min-width: 350px;
@@ -261,11 +211,6 @@ body {
     font-size: 1rem;
     margin: 0;
 }
-
-/* ===================================
-   CUSTOMISASI CAROUSEL BOOTSTRAP
-   =================================== */
-
 /* Tombol Prev & Next */
 .carousel-control-prev,
 .carousel-control-next {
@@ -308,10 +253,6 @@ body {
 .carousel-indicators button.active {
     background-color: #3498db;
 }
-
-/* ===================================
-   RESPONSIVE DESIGN
-   =================================== */
 
 /* Tablet dan Mobile (≤ 992px) */
 @media (max-width: 992px) {
@@ -551,10 +492,6 @@ body {
         font-size: 24px;
     }
 }
-
-/* ===================================
-   RESPONSIVE DESIGN (MEDIA QUERIES)
-   =================================== */
 @media (max-width: 768px) {
     .vm-container {
         grid-template-columns: 1fr;

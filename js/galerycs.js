@@ -1,6 +1,3 @@
-// Smooth scrolling for horizontal galleries
-// DRAG SCROLL
-// DRAG SCROLL
 const galleries = document.querySelectorAll('.kegiatan-gallery, .artikel-gallery, .frame');
 
 galleries.forEach(gallery => {
@@ -67,10 +64,6 @@ function setupArrow(arrowElement, gallery, direction) {
     });
 }
 
-
-// ============================
-//   FIX: INI YANG DIBUAT BARU
-// ============================
 function initArrows() {
 
     // --- KEGIATAN ---
@@ -89,18 +82,9 @@ function initArrows() {
     setupArrow(artikelNavRight, artikelGallery, 'right');
     setupArrow(artikelNavLeft, artikelGallery, 'left');
 
-    // Jika nanti ada testimonial arrow tinggal aktifkan ini
-    // const testimonialGallery = document.querySelector('.frame');
-    // const testiLeft = document.querySelector('.testimonial-nav .left');
-    // const testiRight = document.querySelector('.testimonial-nav .right');
-    // setupArrow(testiRight, testimonialGallery, 'right');
-    // setupArrow(testiLeft, testimonialGallery, 'left');
 }
 
 {
-// ============================
-//  INIT DOM
-// ============================
 document.addEventListener('DOMContentLoaded', () => {
     initArrows();
     console.log("Arrow navigation READY!");
