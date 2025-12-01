@@ -12,8 +12,6 @@ h1, h2, h3, h4, h5, h6,
     font-family: "Poppins", sans-serif;
 }
 
-/* ========== ORIGINAL CSS KAMU ========== */
-
 body {
     background: #f9f9f9;
     color: #333;
@@ -73,7 +71,7 @@ body {
 
 .hero-content p {
     font-size: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
 }
 .hero-section {
     position: relative;
@@ -194,7 +192,7 @@ body {
 ============================= */
 
 .produk-kami {
-    padding: 10px 0;
+    padding: 0px 50px ;
     text-align: center;
 }
 

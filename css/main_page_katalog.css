@@ -2,28 +2,73 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.hero {
-    background: url('../image/header-bg.png') no-repeat center/cover !important;
-    padding: 160px 0 100px;
-    color: #000;
-    z-index: 99999999;
+/* HERO */
+.hero-section {
+    position: relative;
+    height: 30px; /* Sesuaikan tinggi sesuai kebutuhan */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
-.hero-title {
-    font-size: 2.2rem;
+.hero-section .carousel,
+.hero-section .carousel-inner,
+.hero-section .carousel-item {
+    height: 100%;
 }
 
-.hero-subtitle {
-  font-size: 1.1rem;
-  margin-top: 1rem;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.5;
-  margin-bottom: 3.5%;
+.hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(70%);
 }
 
-.btn-jelajahi {
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    z-index: 1;
+}
+
+.hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    margin-top: 40px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    font-weight: bold;}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+.hero-section {
+    position: relative;
+    height: 100vh;
+    margin-top: -90px; /* SESUAIKAN DENGAN TINGGI NAVBAR-MU */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.hero-btn-primary {
     background: #E4947D;
     color: #ffffff;
     padding: 10px 30px;
@@ -37,20 +82,19 @@ body {
     text-decoration: none;
 }
 
-.btn-jelajahi:hover {
+.hero-btn-primary:hover {
     background: #f0baab;
     transform: scale(1.05);
 }
 
-
 .filter-btn {
-    border: 1px solid #d9534f;
+    border: 1px solid #E4947D;
     padding: 6px 18px;
 }
 
 .filter-btn.active,
 .filter-btn:hover {
-    background: #d9534f;
+    background: #f0baab;
     color: #fff;
 }
 
@@ -59,14 +103,22 @@ body {
     object-fit: cover;
 }
 
-.footer {
-    background: #faf3d6;
+.produk-button {
+    color: #000000;
+    padding: 10px -20px;
+    border-radius: 5px;
+    border: 1px solid #E4947D;
+    font-size: 1.1rem;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-right: 5px;
+    text-decoration: none;
 }
 
-.footer ul li {
-    margin-bottom: 6px;
-}
-
-.copyright {
-    background: #e8ddbe;
+.produk-button:hover {
+    background: #f0baab;
+    transform: scale(1.05);
+    color: #fff;
+    font-weight: 600;
 }
