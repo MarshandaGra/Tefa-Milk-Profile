@@ -17,3 +17,34 @@ document.querySelectorAll(".faq-question").forEach(function(button) {
         }
     });
 });
+
+
+document.getElementById("waForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let nama = document.getElementById("nama").value;
+    let email = document.getElementById("email").value;
+    let pesan = document.getElementById("pesan").value;
+
+    let nomorAdmin = "628xxxxxxxxxx"; // ganti dengan nomor TEFA MILK
+
+    let text = 
+        "Halo TEFA MILK,%0A" +
+        "Saya ingin mengajukan pertanyaan.%0A%0A" +
+        "*Nama:* " + nama + "%0A" +
+        "*Email:* " + email + "%0A" +
+        "*Pertanyaan:* " + pesan;
+
+    let url = "https://wa.me/" + nomorAdmin + "?text=" + text;
+
+    window.open(url, "_blank");
+});
+
+
+
+  
+    // Klik kartu langsung buka email
+    document.querySelector('.email-box').addEventListener('click', () => {
+        window.location.href = "mailto:tefamilkduapolije@gmail.com";
+    });
+
