@@ -82,6 +82,14 @@ function initArrows() {
     setupArrow(artikelNavRight, artikelGallery, 'right');
     setupArrow(artikelNavLeft, artikelGallery, 'left');
 
+     // --- TESTIMONI TEFA ---
+    const testimonilGallery = document.querySelector('.artikel-gallery');
+    const testimoniNavLeft = document.querySelector('.artikel-nav .left');
+    const testimoniNavRight = document.querySelector('.artikel-nav .right');
+
+    setupArrow(artikelNavRight, artikelGallery, 'right');
+    setupArrow(artikelNavLeft, artikelGallery, 'left');
+
 }
 
 {

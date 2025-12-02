@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEFA MILK - Ulasan Pelanggan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="peercobaan.css">
+</head>
+<body class="bg-white">
+
+    <!-- Header -->
+    <header class="navbar">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center">
+                <img src="https://c.animaapp.com/uBMnkFhc/img/logo-politeknik-negeri-jember-200x200-1-3@2x.png" alt="Logo Politeknik" class="h-10 w-10 rounded-full">
+                <a class="navbar-brand ms-3 font-bold text-xl ml-3" href="#">TEFA MILK</a>
+            </div>
+            <div class="hidden md:flex space-x-4">
+                <a class="nav-link" href="#">Beranda</a>
+                <a class="nav-link" href="#">Profil</a>
+                <a class="nav-link" href="#">Katalog Produk</a>
+                <a class="nav-link" href="#">Galeri Milk</a>
+                <a class="nav-link" href="#">Mitra Kerjasama</a>
+                <a class="nav-link active" href="#">Kontak</a>
+            </div>
+            <button class="md:hidden text-gray-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <a href="#">GALERI MILK</a> / <span>ULASAN PELANGGAN</span>
+    </nav>
+
+    <!-- Page Title -->
+    <h1 class="page-title">ULASAN PELANGGAN</h1>
+
+    <!-- Testimonials Section -->
+    <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div id="card1" class="card bg-white rounded-xl shadow-lg overflow-hidden" onclick="toggleExpand(1)">
+                <div class="relative">
+                    <img src="milk3.jpg" alt="Marsh" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 left-4 quote-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609v-.017c-5.704 0-9.57 3.731-10.609 8.983h-.017v.017c-5.704 0-9.57 3.731-10.609 8.983h-.017v.017c5.704 0 9.57 3.731 10.609 8.983v.017h.017c1.039-5.252 4.895-8.983 10.609-8.983v.017c-5.252 1.039-8.983 4.895-8.983 10.609v7.391z"/>
+                        </svg>
+                    </div>
+                    <div class="absolute top-4 right-4 text-sm text-gray-500">04-10-2025</div>
+                </div>
+                
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-gray-800">Marsh</h3>
+                        <div class="flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 star-filled" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87-.69 6.9L12 19l-4.31 2.15-.69-6.9-5-4.87 6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 star-filled" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87-.69 6.9L12 19l-4.31 2.15-.69-6.9-5-4.87 6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 star-filled" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87-.69 6.9L12 19l-4.31 2.15-.69-6.9-5-4.87 6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 star-filled" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87-.69 6.9L12 19l-4.31 2.15-.69-6.9-5-4.87 6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 star-filled" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87-.69 6.9L12 19l-4.31 2.15-.69-6.9-5-4.87 6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <p id="text1" class="text-gray-600 leading-relaxed line-clamp-3">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ihat lebih banyak ...
+                    </p>
+                    
+                    <button id="btn1" class="mt-2 text-blue-600 hover:text-blue-800 text-sm font-medium hidden">
+                        lihat lebih banyak ...
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div id="card2" class="card bg-white rounded-xl shadow-lg overflow-hidden" onclick="toggleExpand(2)">
+                <div class="relative">
+                    <img src="milk2.png" alt="Andrew Weltsomn" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 left-4 quote-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609v-.017c-5.704 0-9.57 3.731-10.609 8.983h-.017v.017c-5.704 0-9.57 3.731-10.609 8.983h-.017v.017c5.704 0 9.57 3.731 10.609 8.983v.017h.017c1.039-5.252 4.895-8.983 10.609-8.983v.017c-5.252 1.039-8.983 4.895-8.983 10.609v7.391z"/>
+                        </svg>
+                    </div>
+                    <div class="absolute top-4 right-4 text-sm text-gray-500">01-05-2025</div>
+                </div>
+                
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-gray-800">Andrew Weltsomn</h3>
+                        <div class="flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 star-filled" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87-.69 6.9L12 19l-4.31 2.15-.69-6.9-5-4.87 6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 star-filled" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87-.69 6.9L12 19l-4.31 2.15-.69-6.9-5-4.87 6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 star-filled" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87-.69 6.9L12 19l-4.31 2.15-.69-6.9-5-4.87 6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 star-filled" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87-.69 6.9L12 19l-4.31 2.15-.69-6.9-5-4.87 6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 star-empty" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87-.69 6.9L12 19l-4.31 2.15-.69-6.9-5-4.87 6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <p id="text2" class="text-gray-600 leading-relaxed line-clamp-3">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    
+                    <button id="btn2" class="mt-2 text-blue-600 hover:text-blue-800 text-sm font-medium hidden">
+                        lihat lebih banyak ...
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div id="card3" class="card bg-white rounded-xl shadow-lg overflow-hidden" onclick="toggleExpand(3)">
+                <div class="relative">
+                    <img src="milk1.jpg" alt="Levina Jessica" class="w-full h-48 object-cover">
+                    <div class="absolute top-4 left-4 quote-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609v-.017c-5.704 0-9.57 3.731-10.609 8.983h-.017v.017c-5.704 0-9.57 3.731-10.609 8.983h-.017v.017c5.704 0 9.57 3.731 10.609 8.983v.017h.017c1.039-5.252 4.895-8.983 10.609-8.983v.017c-5.252 1.039-8.983 4.895-8.983 10.609v7.391z"/>
+                        </svg>
+                    </div>
+                    <div class="absolute top-4 right-4 text-sm text-gray-500">14-08-2025</div>
+                </div>
+                
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-gray-800">Levina Jessica</h3>
+                        <div class="flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 star-filled" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87-.69 6.9L12 19l-4.31 2.15-.69-6.9-5-4.87 6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 star-filled" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87-.69 6.9L12 19l-4.31 2.15-.69-6.9-5-4.87 6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 star-filled" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87-.69 6.9L12 19l-4.31 2.15-.69-6.9-5-4.87 6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 star-empty" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87-.69 6.9L12 19l-4.31 2.15-.69-6.9-5-4.87 6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 star-empty" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87-.69 6.9L12 19l-4.31 2.15-.69-6.9-5-4.87 6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <p id="text3" class="text-gray-600 leading-relaxed line-clamp-3">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Ihat lebih banyak ...
+                    </p>
+                    
+                    <button id="btn3" class="mt-2 text-blue-600 hover:text-blue-800 text-sm font-medium">
+                        lihat lebih banyak ...
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo-section">
+                <img src="https://via.placeholder.com/80x80?text=LOGO" alt="TEFA MILK Logo" class="footer-logo">
+                <p class="footer-text">Tefa Milk Polije adalah unit produksi susu milik Politeknik Negeri Jember yang berbasis Teaching Factory, sehingga pendidikan dikombinasikan dengan praktik industri nyata.</p>
+                <p class="footer-text">Mahasiswa terlibat langsung dalam proses produksi, pengemasan, hingga pemasaran produk susu siap konsumsi.</p>
+            </div>
+            
+            <div class="footer-info">
+                <h3 class="footer-heading">TEFA MILK</h3>
+                <p class="info-title">Kantor Pusat</p>
+                <p class="info-text">Jl. Mastrip, Krajan Timur, Sumberasri, Kec. Sumberasri, Kabupaten Jember, Jawa Timur 68121</p>
+                <p class="info-title">Jam Operasional</p>
+                <p class="info-text">Senin - Jumat : 07.30 - 17.00</p>
+                <p class="info-text">Sabtu - Minggu : Tutup</p>
+            </div>
+            
+            <div>
+                <h3 class="footer-heading">MENU UTAMA</h3>
+                <ul class="footer-menu">
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="#">Profil</a></li>
+                    <li><a href="#">Katalog Produk</a></li>
+                    <li><a href="#">Galeri Milk</a></li>
+                    <li><a href="#">Mitra Kerjasama</a></li>
+                    <li><a href="#">Kontak</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3 class="footer-heading">SOSIAL MEDIA</h3>
+                <ul class="footer-social">
+                    <li><a href="#"><span>Instagram</span></a></li>
+                    <li><a href="#"><span>Facebook</span></a></li>
+                    <li><a href="#"><span>Youtube</span></a></li>
+                    <li><a href="#"><span>Whatsapp</span></a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 TEFA MILK. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        let expandedCard = null;
+        
+        function toggleExpand(cardId) {
+            const card = document.getElementById(`card${cardId}`);
+            const text = document.getElementById(`text${cardId}`);
+            const btn = document.getElementById(`btn${cardId}`);
+            
+            if (expandedCard === cardId) {
+                // Collapse
+                card.classList.remove('expanded');
+                text.classList.add('line-clamp-3');
+                if (btn) btn.classList.remove('hidden');
+                expandedCard = null;
+            } else {
+                // Expand
+                if (expandedCard) {
+                    // Collapse previously expanded card
+                    const prevCard = document.getElementById(`card${expandedCard}`);
+                    const prevText = document.getElementById(`text${expandedCard}`);
+                    const prevBtn = document.getElementById(`btn${expandedCard}`);
+                    if (prevCard) prevCard.classList.remove('expanded');
+                    if (prevText) prevText.classList.add('line-clamp-3');
+                    if (prevBtn) prevBtn.classList.remove('hidden');
+                }
+                
+                card.classList.add('expanded');
+                text.classList.remove('line-clamp-3');
+                if (btn) btn.classList.add('hidden');
+                expandedCard = cardId;
+            }
+        }
+    </script>
+</body>
+</html>
+
