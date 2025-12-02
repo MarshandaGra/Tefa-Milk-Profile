@@ -19,23 +19,20 @@ document.querySelectorAll(".faq-question").forEach(function(button) {
 });
 
 
-document.getElementById("waForm").addEventListener("submit", function(e) {
-    e.preventDefault();
+document.getElementById("kirimWa").addEventListener("click", function () {
 
     let nama = document.getElementById("nama").value;
     let email = document.getElementById("email").value;
-    let pesan = document.getElementById("pesan").value;
+    let pertanyaan = document.getElementById("pertanyaan").value;
 
-    let nomorAdmin = "628xxxxxxxxxx"; // ganti dengan nomor TEFA MILK
+    let nomor = "6287729664976"; 
+    let pesan = 
+`Halo, saya ingin bertanya:
+Nama: ${nama}
+Email: ${email}
+Pertanyaan: ${pertanyaan}`;
 
-    let text = 
-        "Halo TEFA MILK,%0A" +
-        "Saya ingin mengajukan pertanyaan.%0A%0A" +
-        "*Nama:* " + nama + "%0A" +
-        "*Email:* " + email + "%0A" +
-        "*Pertanyaan:* " + pesan;
-
-    let url = "https://wa.me/" + nomorAdmin + "?text=" + text;
+    let url = "https://wa.me/" + nomor + "?text=" + encodeURIComponent(pesan);
 
     window.open(url, "_blank");
 });
