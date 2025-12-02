@@ -163,68 +163,43 @@
     background: rgba(231, 167, 78, 0.8);
 }
 
-.artikel-section {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    padding: 40px 20px;
-}
-
-/* Kolom kiri */
-.artikel-text h2 {
-    font-size: 32px;
-    font-weight: 800;
-    line-height: 1.1;
-}
-
-.btn-lihat {
-    display: inline-block;
-    background: #e8a94f;
-    padding: 12px 32px;
-    color: white;
-    border-radius: 30px;
-    margin-top: 20px;
-    font-weight: bold;
-}
-
-/* Slider */
-.slider-container {
-    position: relative;
-    width: 600px;
-}
-
-.slider {
-    display: flex;
-    gap: 20px;
-    overflow: hidden;
-}
-
-.slider img {
-    width: 600px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
-/* Tombol panah */
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #f7e8c0;
-    border: none;
-    padding: 12px;
-    cursor: pointer;
+.gallery-item {
+    flex-shrink: 0;
+    width: 400px;
+    height: 250px;
     border-radius: 8px;
-    font-size: 24px;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
-.arrow.left {
-    left: -50px;
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-.arrow.right {
-    right: -50px;
+.gallery-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.nav-arrow {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.7;
+}
+
+.nav-arrow:hover {
+    transform: scale(1.15);
+    opacity: 1;
+}
+
+.nav-arrow:active {
+    transform: scale(0.95);
 }
 
 /* Testimonial Section - UPDATED FOR SCROLLING */
