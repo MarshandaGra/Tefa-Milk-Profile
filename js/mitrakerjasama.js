@@ -36,9 +36,6 @@ Pertanyaan: ${pertanyaan}`;
 
     window.open(url, "_blank");
 });
-
-
-
   
     // Klik kartu langsung buka email
     document.querySelector('.email-box').addEventListener('click', () => {
