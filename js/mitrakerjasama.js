@@ -18,28 +18,28 @@ document.querySelectorAll(".faq-question").forEach(function(button) {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.getElementById('waSubmit');
+    if (!btn) return;
 
-document.getElementById("waForm").addEventListener("submit", function(e) {
-    e.preventDefault();
+    btn.addEventListener('click', function () {
+      const nama = document.getElementById('nama').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const pertanyaan = document.getElementById('pertanyaan').value.trim();
 
-    let nama = document.getElementById("nama").value;
-    let email = document.getElementById("email").value
-    let pesan = document.getElementById("pesan").value;
+      const nomorWa = "6287729664976"; // ganti jika perlu
 
-    let nomorAdmin = "6287729664976"; // ganti dengan nomor TEFA MILK
+      if (!nama || !email || !pertanyaan) {
+        alert("Mohon lengkapi semua data dan beri pertanyaan terlebih dahulu.");
+        return;
+      }
 
-    let text = 
-        "Halo TEFA MILK,%0A" +
-        "Saya ingin mengajukan pertanyaan.%0A%0A" +
-        "*Nama:* " + nama + "%0A" +
-        "*Email:* " + email + "%0A" +
-        "*Pertanyaan:* " + pesan;
+      const pesan = `Halo, ada pertanyaan baru!\n\nNama: ${nama}\nEmail: ${email}\n\nPertanyaan:\n${pertanyaan}`;
 
-    let url = "https://wa.me/" + nomorAdmin + "?text=" + text;
-
-    window.open(url, "_blank");
-});
-
+      const waUrl = `https://wa.me/${nomorWa}?text=${encodeURIComponent(pesan)}`;
+      window.open(waUrl, "_blank");
+    });
+  });
 
 
   

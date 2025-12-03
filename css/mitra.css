@@ -47,7 +47,8 @@
 
 .hero-content h1 {
     font-size: 42px;
-    font-weight: bold;}
+    font-weight: 700;
+}
 
 .hero-content p {
     font-size: 18px;
@@ -129,101 +130,101 @@
             margin: 0;
         }
 
-/* ===== FAQ ===== */
-/* Container FAQ */
+/* ================== FAQ WRAPPER ================== */
 .faq-section {
     background-color: #FFF8DF;
     border-radius: 20px;
     padding: 40px;
-    margin: 0;
-    max-width: 100%;
 }
 
-/* Item Accordion */
-.accordion-item {
-    border: none;
-    margin-bottom: 8px;
-}
 
+/* ================== ACCORDION ITEM ================== */
 .accordion-item {
     border: none !important;
-    margin-bottom:  15px;
+    margin-bottom: 15px;
     border-radius: 20px;
     overflow: hidden;
-    background: #a8bcbc; /* warna background header seperti gambar */
+    background: #A7BCBC; /* Warna header */
 }
 
+
+/* ================== HEADER BUTTON ================== */
 .accordion-button {
-    background: white !important;
-    color: black !important;
-    font-weight: 600;
-    font-size: 15px;
-    padding: 20px;
-    border-radius: 0 !important;
-    overflow: hidden;
-    box-shadow: none !important;
-}
-
-.accordion-button:not(.collapsed) {
+    background: #A7BCBC !important;
     color: white !important;
-    background: #a8bcbc !important;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 18px 20px;
     box-shadow: none !important;
-}
-
-.accordion-button::after {
-    background-image: none !important;
-    content: "−";
-    font-size: 28px;
-    color: #a8bcbc;
-
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: white;
+    border: none !important;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
+/* Saat dibuka */
+.accordion-button:not(.collapsed) {
+    background: #A7BCBC !important;
+    color: white !important;
+}
+
+
+/* ================== ICON (+ / − ) ================== */
+.accordion-button::after,
 .accordion-button.collapsed::after {
     background-image: none !important;
-    content: "+";
-    font-size: 28px;
-    font-weight: 700;
-    color: white;
-
-    width: 28px;
-    height: 28px;
+    width: 32px;               /* ukuran bulatan */
+    height: 32px;
     border-radius: 50%;
-    background: #a8bcbc;
-    display: flex;
+    font-size: 22px;           /* lebih kecil agar benar-benar center */
+    font-weight: 700;
+    line-height: 1;            /* PENTING agar vertikal jadi pas */
+    display: flex;             /* flexbox center */
     align-items: center;
     justify-content: center;
+    transition: 0.25s ease-in-out;
 }
 
-.accordion-body {
-    background: #a8bcbc;
+/* ICON ketika OPEN (tampil − ) */
+.accordion-button.collapsed::after {
+    content: "+";
     color: white;
-    padding: 16px;
+    background: #8FA3A3;
+}
+
+.accordion-button:not(.collapsed)::after {
+    content: "−";
+    color: #A7BCBC;
+    background: white;
+}
+
+
+/* ================== BODY ================== */
+.accordion-body {
+    background: #A7BCBC;
+    color: white;
+    padding: 18px;
     font-size: 15px;
     font-weight: 500;
-    border-radius: 20px 20px;
 }
 
-
-/* Isi Accordion saat dibuka (biar match warna) */
+/* Saat terbuka, warna body sedikit lebih soft */
 .accordion-button:not(.collapsed) + .accordion-collapse .accordion-body {
-    background-color: rgb(156, 175, 171);
-    color: #ffffff;
-    font-weight: 600;
+    background: #9CB0AE;
 }
 
-/* Responsif HP */
+
+/* ================== RESPONSIVE ================== */
 @media (max-width: 576px) {
     .faq-section {
         padding: 20px;
     }
+
+    .accordion-button {
+        font-size: 14px;
+        padding: 16px;
+    }
 }
+
 
 /* ===== Form ===== */
 #form-section {
@@ -284,7 +285,9 @@
 }
 
 .submit-btn:hover {
-  background-color: #E4947D;
+  background-color: #f0baab;
+  color: #fff;
+  transform: scale(1.05);
 }
 /* Mengatur form agar bisa memposisikan tombol */
 form {
@@ -332,7 +335,7 @@ form {
 
 
 /* ===== SOP ===== */
-        .sop-box {
+        /* .sop-box {
             max-width: 900px;
             background-color: #FAEDCE;
         }
@@ -364,6 +367,49 @@ form {
         .modal-content {
     background-color: #D6DAC9 !important;
 }
+     */
+
+/* ================== SOP SECTION ================== */
+
+.sop-wrapper {
+    background-color: #FFF8DF;
+    border-radius: 25px;
+    padding: 40px 50px;
+    width: 100%;
+}
+
+.sop-wrapper h4 {
+    font-weight: 700;
+    color: #3c2f1e;
+}
+
+/* Kotak Indikator */
+.kotak {
+    width: 20px;
+    height: 20px;
+    background-color: #4B2E19;
+    border-radius: 4px;
+}
+
+/* Button SOP */
+.btn-sop {
+    background-color: #C17F63;
+    color: white;
+    border: none;
+    padding: 6px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.btn-sop:hover {
+    background-color: #9f654d;
+}
+
+/* Modal background */
+.modal-content {
+    background-color: #D6DAC9 !important;
+}
 
 /* ===== join ===== */
         .mitra-section {
@@ -386,6 +432,11 @@ form {
             box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.17);
             max-width: 420px;
         }
+
+        .email-box:hover {
+            background-color: rgb(211, 228, 148);
+            transform: scale(1.03);
+          }
 
         .email-box .icon {
             background-color: #3C3C3C;
