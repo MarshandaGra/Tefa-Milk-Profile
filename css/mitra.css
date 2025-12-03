@@ -130,98 +130,102 @@
             margin: 0;
         }
 
-/* ================== FAQ WRAPPER ================== */
+/* ===== FAQ ===== */
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* Container FAQ */
 .faq-section {
     background-color: #FFF8DF;
     border-radius: 20px;
     padding: 40px;
+    margin: 0;
+    max-width: 100%;
 }
 
+/* Item Accordion */
+.accordion-item {
+    border: none;
+    margin-bottom: 8px;
+}
 
-/* ================== ACCORDION ITEM ================== */
 .accordion-item {
     border: none !important;
-    margin-bottom: 15px;
+    margin-bottom:  15px;
     border-radius: 20px;
     overflow: hidden;
-    background: #A7BCBC; /* Warna header */
+    background: #a8bcbc; /* warna background header seperti gambar */
 }
 
-
-/* ================== HEADER BUTTON ================== */
 .accordion-button {
-    background: #A7BCBC !important;
-    color: white !important;
+    background: white !important;
+    color: black !important;
     font-weight: 600;
-    font-size: 16px;
-    padding: 18px 20px;
+    font-size: 18px;
+    padding: 25px;
+    border-radius: 0 !important;
+    overflow: hidden;
     box-shadow: none !important;
-    border: none !important;
+}
+
+.accordion-button:not(.collapsed) {
+    color: white !important;
+    background: #a8bcbc !important;
+    box-shadow: none !important;
+}
+
+.accordion-button::after {
+    background-image: none !important;
+    content: "−";
+    font-size: 28px;
+    color: #a8bcbc;
+
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: white;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-/* Saat dibuka */
-.accordion-button:not(.collapsed) {
-    background: #A7BCBC !important;
-    color: white !important;
-}
-
-
-/* ================== ICON (+ / − ) ================== */
-.accordion-button::after,
 .accordion-button.collapsed::after {
     background-image: none !important;
-    width: 32px;               /* ukuran bulatan */
-    height: 32px;
-    border-radius: 50%;
-    font-size: 22px;           /* lebih kecil agar benar-benar center */
+    content: "+";
+    font-size: 28px;
     font-weight: 700;
-    line-height: 1;            /* PENTING agar vertikal jadi pas */
-    display: flex;             /* flexbox center */
+    color: white;
+
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #a8bcbc;
+    display: flex;
     align-items: center;
     justify-content: center;
-    transition: 0.25s ease-in-out;
 }
 
-/* ICON ketika OPEN (tampil − ) */
-.accordion-button.collapsed::after {
-    content: "+";
-    color: white;
-    background: #8FA3A3;
-}
-
-.accordion-button:not(.collapsed)::after {
-    content: "−";
-    color: #A7BCBC;
-    background: white;
-}
-
-
-/* ================== BODY ================== */
 .accordion-body {
-    background: #A7BCBC;
+    background: #a8bcbc;
     color: white;
-    padding: 18px;
-    font-size: 15px;
-    font-weight: 500;
+    padding: 25px;
+    font-size: 18px;
+    border-radius: 0 0 20px 20px;
 }
 
-/* Saat terbuka, warna body sedikit lebih soft */
+
+/* Isi Accordion saat dibuka (biar match warna) */
 .accordion-button:not(.collapsed) + .accordion-collapse .accordion-body {
-    background: #9CB0AE;
+    background-color: rgb(156, 175, 171);
+    color: #ffffff;
+    font-weight: 600;
 }
 
-
-/* ================== RESPONSIVE ================== */
+/* Responsif HP */
 @media (max-width: 576px) {
     .faq-section {
         padding: 20px;
-    }
-
-    .accordion-button {
-        font-size: 14px;
-        padding: 16px;
     }
 }
 
@@ -321,6 +325,7 @@ form {
 .profile-btn:hover {
   background-color: #9CAFAB;
   color: #fff;
+  transform: scale(1.05);
 }
 
 /* RESPONSIVE */
