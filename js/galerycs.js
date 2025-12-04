@@ -1,4 +1,4 @@
-const galleries = document.querySelectorAll('.kegiatan-gallery, .artikel-gallery, .frame');
+const galleries = document.querySelectorAll('.kegiatan-gallery, .artikel-gallery, .testimoni-gallery, .frame');
 
 galleries.forEach(gallery => {
     let isDown = false;
@@ -153,31 +153,54 @@ function setupNavigation() {
 }
 
 // "Lihat lebih banyak" functionality for testimonials
-function setupTestimonialReadMore() {
-  const readMoreLinks = document.querySelectorAll('.testimonial-read-more');
+document.addEventListener("DOMContentLoaded", function () {
+    const limit = 40;
 
-  readMoreLinks.forEach(link => {
-    link.style.cursor = 'pointer';
-    
-    link.addEventListener('click', (e) => {
-      const testimonialText = link.previousElementSibling;
-      if (testimonialText && testimonialText.classList.contains('testimonial-text')) {
-        testimonialText.style.maxHeight = 'none';
-        testimonialText.style.overflow = 'visible';
-        testimonialText.style.webkitLineClamp = 'unset';
-        link.style.display = 'none';
-      }
-    });
+    document.querySelectorAll(".testimonial-text").forEach((p) => {
+        let fullText = p.textContent.replace(/\s+/g, " ").trim();
 
-    link.addEventListener('mouseenter', () => {
-      link.style.textDecoration = 'underline';
-    });
+        if (fullText.length <= limit) {
+            p.textContent = fullText;
+            return;
+        }
 
-    link.addEventListener('mouseleave', () => {
-      link.style.textDecoration = 'none';
+        let shortText = fullText.substring(0, limit) + "...";
+
+        p.dataset.full = fullText;
+        p.dataset.short = shortText;
+
+        // Set tampilan awal
+        p.innerHTML = `${shortText}<span class="read-more-btn"> lihat lebih banyak</span>`;
+
+        // FUNCTION untuk re-bind tombol setiap kali innerHTML berubah
+        function bindButton() {
+            const btn = p.querySelector(".read-more-btn");
+
+            btn.addEventListener("click", (e) => {
+                e.stopPropagation();
+
+                const expanded = p.classList.contains("expanded");
+
+                if (expanded) {
+                    // Tutup
+                    p.innerHTML = `${p.dataset.short}<span class="read-more-btn"> lihat lebih banyak</span>`;
+                    p.classList.remove("expanded");
+                } else {
+                    // Buka
+                    p.innerHTML = `${p.dataset.full}<span class="read-more-btn"> sembunyikan</span>`;
+                    p.classList.add("expanded");
+                }
+
+                // Bind ulang tombol setelah isi berubah
+                bindButton();
+            });
+        }
+
+        // Bind awal
+        bindButton();
     });
-  });
-}
+});
+
 
 // Footer social media links
 function setupSocialLinks() {
@@ -349,19 +372,3 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-function toggleText(p, btn) {
-    const full = p.getAttribute("data-full");
-    const limit = 120;
-
-    if (p.classList.contains("expanded")) {
-        // TUTUP kembali
-        p.innerText = full.substring(0, limit) + "...";
-        btn.innerText = " lihat lebih banyak";
-        p.classList.remove("expanded");
-    } else {
-        // BUKA teks penuh
-        p.innerText = full;
-        btn.innerText = " sembunyikan";
-        p.classList.add("expanded");
-    }
-}

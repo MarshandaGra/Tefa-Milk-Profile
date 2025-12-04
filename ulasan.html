@@ -124,20 +124,31 @@
         .breadcrumb span {
             color: #666;
         }
-
+        /* Testimonial collapsed (awal) */
         .testimonial-text {
             display: -webkit-box;
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
             overflow: hidden;
-            position: relative;
+            transition: all 0.25s ease;
+        }
+
+        /* Testimonial expanded */
+        .testimonial-text.expanded {
+            display: block !important;
+            -webkit-line-clamp: unset !important;
+            overflow: visible !important;
         }
 
         .read-more-btn {
-            color: #0d6efd;
+            color: #E4947D;
             cursor: pointer;
-            font-weight: 500;
+            font-weight: 400;
+            display: inline;     /* supaya nempel */
+            margin-left: 4px;    /* jarak kecil setelah teks */
         }
+
+
 
     </style>
 </head>
@@ -161,7 +172,7 @@
 
             <!-- CARD 1 -->
             <div class="col-md-4">
-                <div class="card review-card shadow-lg p-0" onclick="toggleExpand(1)">
+                <div class="card review-card shadow-lg p-0">
                     
                     <!-- Image + Quote Icon -->
                     <div class="position-relative">
@@ -190,7 +201,7 @@
                         </div>
 
                         <p class="testimonial-text">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae error porro possimus quam officia ab dolor praesentium architecto quaerat ipsa ea, consequatur, doloribus deserunt numquam voluptatum repudiandae tempora eum, saepe aspernatur dolorem laborum maxime suscipit laboriosam! Fugit incidunt quisquam deserunt quibusdam quam quo fugiat aliquid animi facilis. Aperiam atque debitis commodi error tenetur eum blanditiis repudiandae, earum, at dolorum modi nostrum excepturi nulla iusto voluptates cum quia necessitatibus iste maiores nisi! Repellendus amet incidunt optio quisquam facilis quam soluta maxime modi ipsum alias ullam deleniti quaerat reprehenderit, sunt culpa, deserunt quibusdam nemo beatae voluptate maiores itaque. Quia ex delectus, quae perferendis dolor ipsa consectetur reiciendis laborum architecto. Neque magni molestias qui rem voluptate ipsum fuga nesciunt a possimus iure? Ducimus?
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur minus veritatis aliquid sed nemo laboriosam odit, consectetur consequatur, molestias possimus, architecto dicta quae repellat molestiae voluptatem sequi quisquam! Libero nulla repudiandae ea eveniet rem deleniti vel est maxime, aperiam magni, hic veritatis ullam. Fugiat, molestias praesentium! Consectetur minima perferendis dolorum assumenda voluptate iste adipisci quidem, reprehenderit consequuntur eveniet natus, tempore labore, optio ratione earum accusantium magni. Nulla corporis aliquam accusamus repellendus eaque repudiandae ratione veritatis fugiat, doloribus, libero ipsum quasi ab ipsam dolorem doloremque odit blanditiis vero provident cumque pariatur reprehenderit officiis sapiente accusantium! Iusto aut repellat veritatis officiis tempora?    
                         </p>
                     </div>
                 </div>
@@ -199,7 +210,7 @@
 
             <!-- CARD 2 -->
             <div class="col-md-4">
-                <div class="card review-card shadow-lg p-0" onclick="toggleExpand(1)">
+                <div class="card review-card shadow-lg p-0">
                     
                     <!-- Image + Quote Icon -->
                     <div class="position-relative">
@@ -227,9 +238,8 @@
                             <span class="text-muted small">01-05-2025</span>
                         </div>
 
-                        <p id="text2" class="text-muted clamp-3">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...
-                            <span class="text-primary read-more" onclick="expandText(2)">lihat lebih banyak ...</span>
+                        <p class="testimonial-text">
+                         Lorem ipsum dolor sit amet.
                         </p>
                     </div>
 
@@ -238,11 +248,11 @@
 
             <!-- CARD 3 -->
             <div class="col-md-4">
-                <div class="card review-card shadow-lg p-0" onclick="toggleExpand(1)">
+                <div class="card review-card shadow-lg p-0">
                     
                     <!-- Image + Quote Icon -->
                     <div class="position-relative">
-                        <img src="./image/milk1.jpg" class="w-100 top-image" alt="Foto">
+                        <img src="./image/milk5.jpg" class="w-100 top-image" alt="Foto">
 
                         <div class="quote-circle">
                             <i class="fa-solid fa-quote-left"></i>
@@ -266,11 +276,9 @@
                             <span class="text-muted small">14-08-2025</span>
                         </div>
 
-                        <p id="text3" class="text-muted clamp-3">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...
-                            <span class="text-primary read-more" onclick="expandText(3)">lihat lebih banyak ...</span>
+                        <p class="testimonial-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum doloremque facilis exercitationem non quis ducimus. Commodi laborum voluptatem, atque eaque minima voluptatum dignissimos sit? Dicta, incidunt ipsam! Excepturi, iusto voluptate!
                         </p>
-
                     </div>
 
                 </div>
@@ -282,16 +290,7 @@
     <div id="footer"></div>
     <!-- JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-        function expandText(id) {
-            const text = document.getElementById("text" + id);
-            const link = text.querySelector(".read-more");
-
-            text.classList.remove("clamp-3");     // buka teks
-            link.style.display = "none";          // sembunyikan "lihat lebih banyak"
-        }
-    </script>
+    <script src="js/galerycs.js"></script>
     <script src="js/navbar.js"></script>
     <script src="js/footer.js"></script>
 

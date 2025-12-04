@@ -439,133 +439,152 @@ form {
             margin: 0;
             font-size: 16px;
         }
-/* Responsive */
+/* ===========================
+   FIX OVERFLOW GLOBAL
+=========================== */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden !important;
+}
+
+
+/* ===========================
+   RESPONSIVE 991PX
+=========================== */
 @media (max-width: 991px) {
+
   .navbar-brand {
-    font-size: 24px;
+      font-size: 24px;
   }
 
   .navbar-nav .nav-link {
-    font-size: 18px;
+      font-size: 18px;
   }
 
   .hero-title {
-    font-size: 36px;
+      font-size: 36px;
   }
 
   .hero-subtitle {
-    font-size: 20px;
-  }
-
-  .milk-splash {
-    height: 250px;
+      font-size: 20px;
   }
 
   .section-title {
-    font-size: 36px;
+      font-size: 36px;
   }
 
   .contact-heading {
-    font-size: 28px;
+      font-size: 28px;
   }
 
   .form-title {
-    font-size: 28px;
+      font-size: 28px;
   }
 }
 
+
+/* ===========================
+   RESPONSIVE 768PX
+=========================== */
 @media (max-width: 768px) {
+
+  /* Hilangkan splash */
   .milk-splash {
-    display: none;
+      display: none;
   }
 
+  /* HERO SECTION */
   .hero-section {
-            height: 61vh;
-            margin-top: 0px;
-            margin-bottom: 25px;
-        }
+      height: 61vh;
+      margin-top: 0;
+      margin-bottom: 25px;
+      padding: 0 10px;
+  }
 
-        .hero-content {
-            width: 94%;
-            padding: 18px;
-        }
+  .hero-content {
+      width: 100%;
+      max-width: 100%;
+      padding: 15px;
+  }
 
-        .hero-content h1 {
-            font-size: 28px;
-            margin-bottom: 25px;
-        }
+  .hero-content h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+  }
 
-        .hero-content p {
-            font-size: 14px;
-            margin-bottom: 18px;
-            padding: 0 20px;
-        }
+  .hero-content p {
+      font-size: 14px;
+      margin-bottom: 15px;
+      padding: 0 10px;
+  }
 
+  /* Section title */
   .section-title {
-    font-size: 28px;
+      font-size: 28px;
   }
 
   .contact-heading {
-    font-size: 24px;
+      font-size: 24px;
   }
 
   .contact-description,
   .form-description {
-    font-size: 18px;
+      font-size: 18px;
   }
 
-  .form-title {
-    font-size: 24px;
-  }
-
-  .contact-icon {
-    width: 60px;
-    height: 60px;
-  }
-
-  .contact-icon i {
-    font-size: 24px;
-  }
-
+  .contact-icon,
   .social-icon {
-    width: 60px;
-    height: 60px;
+      width: 60px;
+      height: 60px;
   }
 
+  .contact-icon i,
   .social-icon i {
-    font-size: 24px;
+      font-size: 24px;
   }
 
+  /* SOP WRAPPER */
   .sop-wrapper {
-        padding: 30px 25px;
-    }
+      padding: 25px 20px !important;
+  }
 
-    /* Biar layout kolom turun rapi saat layar kecil */
-    .sop-item .col-1,
-    .sop-item .col-7,
-    .sop-item .col-4 {
-        text-align: left !important;
-    }
+  /* Atur ulang layout SOP agar tidak overflow */
+  .sop-item {
+      margin: 0 !important;
+      padding: 10px 0 !important;
+  }
 
-    .sop-item .col-4 {
-        margin-top: 8px;
-        text-align: left !important;
-    }
+  .sop-item .col-1,
+  .sop-item .col-7,
+  .sop-item .col-4 {
+      width: 100% !important;
+      flex: 0 0 100% !important;
+      max-width: 100% !important;
+      text-align: left !important;
+  }
 
-    .btn-sop {
-        width: 100%;
-        margin-top: 5px;
-    }
+  .sop-item .col-4 {
+      margin-top: 10px;
+  }
+
+  .btn-sop {
+      width: 100% !important;
+      margin-top: 8px;
+  }
 }
 
+
+/* ===========================
+   RESPONSIVE 480PX
+=========================== */
 @media (max-width: 480px) {
 
-    .sop-wrapper {
-        padding: 25px 18px;
-    }
+  .sop-wrapper {
+      padding: 20px 15px !important;
+  }
 
-    .btn-sop {
-        font-size: 13px;
-        padding: 6px 14px;
-    }
+  .btn-sop {
+      font-size: 13px;
+      padding: 6px 14px;
+  }
 }

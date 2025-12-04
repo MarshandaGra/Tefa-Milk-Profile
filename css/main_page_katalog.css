@@ -135,9 +135,39 @@ body {
     color: #fff;
 }
 
+.produk-button {
+        color: #000000;
+        padding: 10px -20px;
+        border-radius: 5px;
+        border: 1px solid #E4947D;
+        font-size: 1.1rem;
+        font-weight: 400;
+        cursor: pointer;
+        transition: 0.3s ease;
+        margin-right: 5px;
+        text-decoration: none;
+    }
+
+    .produk-button:hover {
+        background: #f0baab;
+        transform: scale(1.05);
+        color: #fff;
+        font-weight: 600;
+    }
+
 /* =============================
    RESPONSIVE
    ============================= */
+
+@media (min-width: 992px) {
+    .filter-wrapper {
+        justify-content: center; /* RAPI DI TENGAH SAAT DESKTOP */
+        overflow-x: visible;     /* Tidak perlu scroll di desktop */
+        white-space: normal;     /* Biar tidak memanjang */
+        flex-wrap: wrap;         /* Jika panjang, bisa turun ke baris baru */
+    }
+}
+
 
 /* Tablet & HP */
 

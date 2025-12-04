@@ -408,15 +408,6 @@ body {
   color: #fff;
 }
 
-/* Map Section */
-
-.map-wrapper {
-  width: 100%;        /* Pastikan selebar layar */
-  max-width: 1200px; /*  Boleh dibatasi jika ingin */
-  margin: 0 auto;     /* INI yang benar untuk center */
-  padding-bottom: 3rem;
-  margin-bottom: 3rem;
-}
 
 /* FIX NAVBAR RESPONSIVE */
 .navbar {
@@ -428,7 +419,6 @@ body {
 .navbar-collapse {
     width: 100% !important;
     max-width: 100% !important;
-    background: #ffffff;
     padding: 15px;
     border-radius: 12px;
 }
@@ -436,6 +426,42 @@ body {
 .navbar-nav .nav-link {
     white-space: nowrap;  /* Menghindari teks turun aneh */
 }
+
+/* MAP WRAPPER */
+.map-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+/* MAP FRAME – DESKTOP */
+.map-wrapper iframe {
+    width: 100% !important;
+    min-height: 350px !important;
+    height: 350px;
+    border: 0;
+    border-radius: 15px;
+    display: block;              /* Fix Android Blank */
+    background: #f0f0f0;         /* Prevent invisible blank */
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+    .map-wrapper iframe {
+        height: 280px !important;
+        min-height: 280px !important;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+    .map-wrapper iframe {
+        height: 200px !important;
+        min-height: 200px !important;
+    }
+}
+
 
 @media (max-width: 768px) {
     .navbar-brand img {
@@ -459,22 +485,6 @@ body {
         font-size: 16px !important;
     }
 }
-
-
-/* MAP FIX */
-.map-wrapper iframe {
-    width: 100% !important;
-    height: 350px !important;
-    border-radius: 15px;
-}
-
-/* HP */
-@media (max-width: 768px) {
-    .map-wrapper iframe {
-        height: 180px !important;
-    }
-}
-
 
 /* Responsive untuk HP & Tablet (<=768px) */
 @media (max-width: 600px) {
@@ -525,7 +535,7 @@ body {
     .contact-icon {
         width: 45px;
         height: 45px;
-        margin-top: 5px;
+        margin-top: 19px;
     }
 
     .contact-icon i {
@@ -600,11 +610,6 @@ body {
         font-size: 16px;
     }
 
-    /* MAP */
-    .map-wrapper iframe {
-        height: 200px !important;
-    }
-
     /* Navbar container */
     .navbar {
         padding: 10px 15px;
@@ -630,7 +635,6 @@ body {
 
     /* Dropdown menu HP */
     .navbar-collapse {
-        background: #ffffff;
         padding: 15px;
         border-radius: 10px;
     }

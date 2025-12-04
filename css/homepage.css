@@ -363,7 +363,7 @@ body {
     color: #000000;
 }
 
-.btn-reko {
+/* .btn-reko {
     width: 100%;
     padding: 10px;
     border-radius: 8px;
@@ -377,7 +377,27 @@ body {
 .btn-reko:hover {
     background: #D46A6A;
     color: white;
-}
+} */
+
+.btn-reko {
+        color: #000000;
+        padding: 5px 40px;
+        border-radius: 5px;
+        border: 1.5px solid #E4947D;
+        font-size: 1.1rem;
+        font-weight: 400;
+        cursor: pointer;
+        transition: 0.25s ease;
+        margin-right: 5px;
+        text-decoration: none;
+    }
+
+    .btn-reko:hover {
+        background: #E4947D;
+        transform: scale(1.05);
+        color: #fff;
+        font-weight: 600;
+    }
 
 /* SECTION RASA TERBAIK */
 .best {
@@ -555,7 +575,9 @@ body {
 
     /* rekomendasi card button dan harga */
     .reko-card .harga { font-size: 16px; }
-    .btn-reko { padding: 10px; }
+    .btn-reko { 
+        padding: 10px 40px; 
+    }
 
     /* Best section stack */
     .best {
