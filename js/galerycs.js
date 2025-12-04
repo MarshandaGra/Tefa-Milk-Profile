@@ -83,12 +83,12 @@ function initArrows() {
     setupArrow(artikelNavLeft, artikelGallery, 'left');
 
      // --- TESTIMONI TEFA ---
-    const testimonilGallery = document.querySelector('.artikel-gallery');
-    const testimoniNavLeft = document.querySelector('.artikel-nav .left');
-    const testimoniNavRight = document.querySelector('.artikel-nav .right');
+    const testimoniGallery = document.querySelector('.testimoni-gallery');
+    const testimoniNavLeft = document.querySelector('.testimoni-nav .left');
+    const testimoniNavRight = document.querySelector('.testimoni-nav .right');
 
-    setupArrow(artikelNavRight, artikelGallery, 'right');
-    setupArrow(artikelNavLeft, artikelGallery, 'left');
+    setupArrow(testimoniNavRight, testimoniGallery, 'right');
+    setupArrow(testimoniNavLeft, testimoniGallery, 'left');
 
 }
 
@@ -323,4 +323,45 @@ if (document.readyState === 'loading') {
   setupGalleryCursor();
   
   console.log('JavaScript loaded successfully!');
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const limit = 120; // batas karakter, bisa diganti misal 150 / 200
+
+    document.querySelectorAll(".testimonial-text").forEach((p, index) => {
+        const fullText = p.innerText.trim();
+
+        // Jika teks pendek → tidak perlu "lihat lebih banyak"
+        if (fullText.length <= limit) return;
+
+        const shortText = fullText.substring(0, limit) + "...";
+
+        // Simpan data asli
+        p.setAttribute("data-full", fullText);
+        p.innerText = shortText;
+
+        // Tambahkan tombol otomatis
+        const btn = document.createElement("span");
+        btn.className = "read-more-btn";
+        btn.innerText = " lihat lebih banyak";
+        btn.onclick = () => toggleText(p, btn);
+        p.after(btn);
+    });
+});
+
+function toggleText(p, btn) {
+    const full = p.getAttribute("data-full");
+    const limit = 120;
+
+    if (p.classList.contains("expanded")) {
+        // TUTUP kembali
+        p.innerText = full.substring(0, limit) + "...";
+        btn.innerText = " lihat lebih banyak";
+        p.classList.remove("expanded");
+    } else {
+        // BUKA teks penuh
+        p.innerText = full;
+        btn.innerText = " sembunyikan";
+        p.classList.add("expanded");
+    }
 }

@@ -47,7 +47,7 @@ body {
 }
 
 .hero-content {
-    margin-top: 40px;
+    /* margin-top: px; */
     position: relative;
     z-index: 2;
     text-align: center;
@@ -389,13 +389,27 @@ body {
         display: none;
     }
 
-    .hero-title {
-        font-size: 28px;
-    }
+    .hero-section {
+            height: 60vh;
+            margin-top: 0px;
+            margin-bottom: 25px;
+        }
 
-    .hero-subtitle {
-        font-size: 18px;
-    }
+        .hero-content {
+            width: 94%;
+            padding: 18px;
+        }
+
+        .hero-content h1 {
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        .hero-content p {
+            font-size: 14px;
+            margin-bottom: 18px;
+            padding: 0 20px;
+        }
 
     .section-title {
         font-size: 28px;

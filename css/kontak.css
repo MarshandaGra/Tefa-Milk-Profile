@@ -394,7 +394,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
   font-size: 18px;
-  color: #000000;
+  color: #ffffff;
   box-shadow: 0px 3px 4px 1px rgba(0, 0, 0, 0.5);
   transition: all 0.3s ease;
   width: auto;
@@ -412,97 +412,237 @@ body {
 
 .map-wrapper {
   width: 100%;        /* Pastikan selebar layar */
-  max-width: 1200px;  /* Boleh dibatasi jika ingin */
+  max-width: 1200px; /*  Boleh dibatasi jika ingin */
   margin: 0 auto;     /* INI yang benar untuk center */
   padding-bottom: 3rem;
   margin-bottom: 3rem;
 }
 
+/* FIX NAVBAR RESPONSIVE */
+.navbar {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
+.navbar-collapse {
+    width: 100% !important;
+    max-width: 100% !important;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+}
 
-/* Footer */
-
-
-/* Responsive */
-@media (max-width: 991px) {
-  .navbar-brand {
-    font-size: 24px;
-  }
-
-  .navbar-nav .nav-link {
-    font-size: 18px;
-  }
-
-  .hero-title {
-    font-size: 36px;
-  }
-
-  .hero-subtitle {
-    font-size: 20px;
-  }
-
-  .milk-splash {
-    height: 250px;
-  }
-
-  .section-title {
-    font-size: 36px;
-  }
-
-  .contact-heading {
-    font-size: 28px;
-  }
-
-  .form-title {
-    font-size: 28px;
-  }
+.navbar-nav .nav-link {
+    white-space: nowrap;  /* Menghindari teks turun aneh */
 }
 
 @media (max-width: 768px) {
-  .milk-splash {
-    display: none;
-  }
+    .navbar-brand img {
+        width: 110px !important;
+    }
 
-  .hero-title {
-    font-size: 28px;
-  }
+    .navbar {
+        padding: 8px 15px !important;
+    }
 
-  .hero-subtitle {
-    font-size: 18px;
-  }
+    .navbar-collapse {
+        text-align: center;
+        padding: 20px 10px !important;
+    }
 
-  .section-title {
-    font-size: 28px;
-  }
+    .navbar-nav {
+        gap: 5px;
+    }
 
-  .contact-heading {
-    font-size: 24px;
-  }
+    .nav-link {
+        font-size: 16px !important;
+    }
+}
 
-  .contact-description,
-  .form-description {
-    font-size: 18px;
-  }
 
-  .form-title {
-    font-size: 24px;
-  }
+/* MAP FIX */
+.map-wrapper iframe {
+    width: 100% !important;
+    height: 350px !important;
+    border-radius: 15px;
+}
 
-  .contact-icon {
-    width: 60px;
-    height: 60px;
-  }
+/* HP */
+@media (max-width: 768px) {
+    .map-wrapper iframe {
+        height: 180px !important;
+    }
+}
 
-  .contact-icon i {
-    font-size: 24px;
-  }
 
-  .social-icon {
-    width: 60px;
-    height: 60px;
-  }
+/* Responsive untuk HP & Tablet (<=768px) */
+@media (max-width: 600px) {
 
-  .social-icon i {
-    font-size: 24px;
-  }
+    /* HERO */
+    .hero-section {
+        height: 61vh;
+        margin-top: 0px;
+        margin-bottom: 25px;
+    }
+
+    .hero-content {
+        width: 94%;
+        padding: 18px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+        margin-bottom: 8px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+        margin-bottom: 18px;
+        padding: 0 20px;
+    }
+
+    /* Contact Section */
+    .contact-heading {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .contact-description {
+        font-size: 14px;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .contact-details {
+        margin-left: 0;
+    }
+
+    .contact-item {
+        gap: 10px;
+    }
+
+    .contact-icon {
+        width: 45px;
+        height: 45px;
+        margin-top: 5px;
+    }
+
+    .contact-icon i {
+        font-size: 18px;
+    }
+
+    .contact-label {
+        font-size: 16px;
+    }
+
+    .contact-value {
+        font-size: 14px;
+    }
+
+    .contact-divider {
+        border-top: 3px solid #000;
+        margin-top: -20px;
+    }
+
+    /* Social Media */
+    .social-heading {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .social-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .social-icon i {
+        font-size: 18px;
+    }
+
+    /* Form */
+    .form-wrapper {
+        padding: 20px;
+        margin-top: 15px;
+    }
+
+    .form-title {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .form-description {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .form-label {
+        font-size: 16px;
+    }
+
+    .custom-input,
+    .custom-textarea {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .rating-stars .star {
+        font-size: 22px;
+    }
+
+    .btn-submit {
+        width: 100%;
+        max-width: none;
+        font-size: 16px;
+    }
+
+    /* MAP */
+    .map-wrapper iframe {
+        height: 200px !important;
+    }
+
+    /* Navbar container */
+    .navbar {
+        padding: 10px 15px;
+    }
+
+    /* Logo */
+    .navbar-brand img {
+        width: 120px;    /* kecil agar pas layar HP */
+        height: auto;
+    }
+
+    /* Toggle (hamburger) agar muncul di HP */
+    .navbar-toggler {
+        border: none;
+        outline: none;
+        box-shadow: none;
+    }
+
+    .navbar-toggler-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    /* Dropdown menu HP */
+    .navbar-collapse {
+        background: #ffffff;
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .navbar-nav {
+        text-align: center;
+        gap: 10px;
+    }
+
+    .nav-link {
+        font-size: 16px;
+        font-weight: 600;
+        padding: 8px 0;
+    }
 }

@@ -1,3 +1,8 @@
+/* -------------------------
+   homepage.css (responsive)
+   Ganti file css/homepage.css kamu dengan isi ini
+------------------------- */
+
 * {
     margin: 0;
     padding: 0;
@@ -20,19 +25,27 @@ body {
 /* HERO */
 .hero-section {
     position: relative;
-    height: 30px; /* Sesuaikan tinggi sesuai kebutuhan */
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    margin-bottom: 0;
+    /* default desktop height */
+    height: 100vh;
 }
 
-.hero-section .carousel,
-.hero-section .carousel-inner,
-.hero-section .carousel-item {
+/* background image wrapper */
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
+    z-index: 1;
+    overflow: hidden;
 }
 
+.hero-background img,
 .hero-bg-img {
     width: 100%;
     height: 100%;
@@ -41,50 +54,38 @@ body {
     filter: brightness(70%);
 }
 
-.hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 90%;
-    z-index: 1;
-}
-
-.hero-background img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
+/* hero content */
 .hero-content {
-    margin-top: 40px;
+    padding: 20px;
     position: relative;
     z-index: 2;
     text-align: center;
     color: white;
+    max-width: 1100px;
+    width: 92%;
 }
 
 .hero-content h1 {
     font-size: 42px;
     font-weight: bold;
+    line-height: 1.05;
 }
 
 .hero-content p {
     font-size: 18px;
     margin-bottom: 35px;
 }
-.hero-section {
-    position: relative;
-    height: 100vh;
-    margin-top: -90px; /* SESUAIKAN DENGAN TINGGI NAVBAR-MU */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    margin-bottom: 0;
+
+/* BUTTONS */
+.hero-btn-primary,
+.hero-btn-outline,
+.btn-jelajahi {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
 }
 
-/* BUTTON */
+/* primary */
 .hero-btn-primary {
     background: #E4947D;
     color: #ffffff;
@@ -95,15 +96,15 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: 0.3s ease;
-    margin-right: 5px;
-    text-decoration: none;
+    margin-right: 10px;
 }
 
 .hero-btn-primary:hover {
     background: #f0baab;
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
+/* outline */
 .hero-btn-outline {
     background: transparent;
     color: #ffffff;
@@ -114,16 +115,15 @@ body {
     font-weight: 700;
     cursor: pointer;
     transition: 0.3s ease;
-    text-decoration: none;
 }
 
 .hero-btn-outline:hover {
     background: #ffffff;
     color: #2d2a26;
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
-/* button produk */
+/* produk buttons */
 .produk-btn {
     background: #e7d7b5;
     color: #2c2b28;
@@ -141,7 +141,7 @@ body {
     transform: translateY(-3px);
 }
 
-/* button produk rekomendasi */
+/* rekomendasi button */
 .rekom-btn {
     background: #f3e3c1;
     color: #2e2c28;
@@ -160,6 +160,7 @@ body {
     box-shadow: 0 6px 16px rgba(210, 185, 140, 0.7);
     transform: translateY(-3px);
 }
+
 .harga {
     font-size: 18px;
     font-weight: 700;
@@ -167,7 +168,6 @@ body {
     margin: 10px 0 15px;
 }
 
-/* button jelajahi katalog*/
 .btn-jelajahi {
     background: #E4947D;
     color: #ffffff;
@@ -178,7 +178,6 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: 0.3s ease;
-    margin-right: 5px;
     text-decoration: none;
 }
 
@@ -187,12 +186,13 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 6px 16px rgba(0,0,0,0.25);
 }
+
 /* ============================
-      PRODUK KAMI
-============================= */
+   PRODUK KAMI
+   ========================== */
 
 .produk-kami {
-    padding: 0px 50px ;
+    padding: 40px 50px;
     text-align: center;
 }
 
@@ -266,7 +266,7 @@ body {
     flex-grow: 1;
 }
 
-/* Tombol */
+/* produk button */
 .produk-kami .produk-btn {
     width: 100%;
     padding: 10px;
@@ -283,8 +283,9 @@ body {
     color: white;
 }
 
+/* REKOMENDASI */
 .rekomendasi {
-    padding: 60px 0;
+    padding: 60px 20px;
     text-align: center;
 }
 
@@ -314,7 +315,7 @@ body {
     gap: 28px;
 }
 
-/* CARD STYLE PERSIS GAMBAR */
+/* CARD Rekomendasi */
 .reko-card {
     background: #FAF3D6;
     border: 1.5px solid #eee; 
@@ -333,23 +334,20 @@ body {
     box-shadow: 0 10px 25px rgba(0,0,0,0.10);
 }
 
-/* IMAGE FIXED HEIGHT seperti contoh */
 .reko-card img {
     width: 100%;
-    height: 200px;       /* Atur agar sama tinggi seperti contoh */
-    object-fit: cover;   /* Memotong gambar tanpa distorsi */
+    height: 200px;
+    object-fit: cover;
     border-radius: 8px;
     background: #f5f5f5;
 }
 
-/* TITLE */
 .reko-card h3 {
     margin: 15px 0 8px;
     font-size: 20px;
     font-weight: 700;
 }
 
-/* TEXT */
 .reko-card p {
     color: #444;
     font-size: 15px;
@@ -357,7 +355,6 @@ body {
     margin-bottom: 15px;
 }
 
-/* HARGA */
 .reko-card .harga {
     font-weight: 700;
     font-size: 16px;
@@ -366,7 +363,6 @@ body {
     color: #000000;
 }
 
-/* BUTTON OUTLINE PERSIS GAMBAR */
 .btn-reko {
     width: 100%;
     padding: 10px;
@@ -394,6 +390,9 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* TEXT AREA */
@@ -406,7 +405,6 @@ body {
     position: relative;
 }
 
-/* Garis dekorasi kecil di bawah judul */
 .best-content h2::after {
     content: "";
     width: 80px;
@@ -435,45 +433,181 @@ body {
     height: 160px;
     object-fit: cover;
     border-radius: 15px;
-
-    /* efek premium */
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     transition: 0.3s ease;
-
-    /* border lembut */
     border: 3px solid #f2e6cf;
 }
 
-/* hover efek */
 .best-images img:hover {
     transform: translateY(-6px) scale(1.03);
     box-shadow: 0 12px 24px rgba(228,148,125,0.4);
     border-color: #E4947D;
 }
 
-/* RESPONSIVE */
+/* small layout tweaks for containers */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* -------------------------------------------------
+   RESPONSIVE RULES
+   (tablet / mobile)
+   ------------------------------------------------- */
+
+/* Medium devices / small laptops */
 @media (max-width: 900px) {
+    .produk-kami { padding: 30px 30px; }
+    .produk-kami .produk-grid,
+    .produk-reko-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .hero-content h1 {
+        font-size: 34px;
+    }
+
     .best-content {
         flex-direction: column;
         text-align: center;
     }
 
-    .best-content p {
-        max-width: 100%;
+    .best-images {
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
-    .best-content h2::after {
-        margin-left: auto;
-        margin-right: auto;
+    .best-images img {
+        width: 48%;
+        height: 160px;
     }
+}
+
+/* Small devices / large phones */
+@media (max-width: 600px) {
+
+    /* HERO */
+    .hero-section {
+        height: 55vh; /* reduce hero height on phones */
+        margin-top: 0; /* jika sebelumnya menggunakan offset navbar */
+        margin-bottom: 25px;
+    }
+
+    .hero-content {
+        width: 94%;
+        padding: 18px;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+        margin-bottom: 8px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+        margin-bottom: 18px;
+    }
+
+    /* tombol hero: jadi vertikal & lebar penuh */
+    .hero-btn-primary,
+    .hero-btn-outline {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border-radius: 12px;
+        font-size: 16px;
+    }
+
+    /* Produk grid -> 1 kolom */
+    .produk-kami {
+        padding: 20px 16px;
+    }
+
+    .produk-kami .produk-grid,
+    .produk-reko-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .produk-kami .produk-card,
+    .reko-card {
+        padding: 14px;
+    }
+
+    .produk-kami .produk-card img,
+    .reko-card img {
+        height: 160px;
+    }
+
+    .produk-kami .produk-card h3,
+    .reko-card h3 {
+        font-size: 18px;
+    }
+
+    .produk-kami .produk-card p,
+    .reko-card p {
+        font-size: 14px;
+    }
+
+    /* rekomendasi card button dan harga */
+    .reko-card .harga { font-size: 16px; }
+    .btn-reko { padding: 10px; }
+
+    /* Best section stack */
+    .best {
+        padding: 40px 0;
+    }
+
+    .best-content h2 { font-size: 28px; }
+    .best-content p { font-size: 15px; max-width: 100%; }
 
     .best-images {
+        gap: 12px;
         justify-content: center;
     }
 
     .best-images img {
-        width: 90%;
-        height: 200px;
+        width: 48%;
+        height: 140px;
     }
+
+    /* footer spacing (jika ada) */
+    footer { padding: 20px 16px; }
+
 }
 
+/* Extra small / very small phones */
+@media (max-width: 420px) {
+
+    .hero-section { height: 62vh; }
+
+    .hero-content h1 { font-size: 22px; }
+    .hero-content p { font-size: 13px; }
+
+    .produk-kami { padding: 16px 12px; }
+    .rekomendasi { padding: 30px 10px; }
+
+    .best-images img { width: 100%; height: 120px; }
+
+    .produk-kami .produk-card img,
+    .reko-card img { height: 140px; }
+
+    .hero-btn-primary,
+    .hero-btn-outline,
+    .btn-jelajahi {
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .produk-kami .produk-card p,
+    .reko-card p { font-size: 13px; }
+
+    .harga { font-size: 15px; }
+}
+
+/* Utility: make images fluid in case other components add images */
+img { max-width: 100%; height: auto; display: block; }

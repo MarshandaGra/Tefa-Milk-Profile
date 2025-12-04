@@ -338,70 +338,41 @@ form {
   }
 }
 
-
-/* ===== SOP ===== */
-        /* .sop-box {
-            max-width: 900px;
-            background-color: #FAEDCE;
-        }
-
-        h4 {
-            font-weight: 700;
-            color: #3c2f1e;
-        }
-
-        .kotak {
-            width: 20px;
-            height: 20px;
-            background-color: #4B2E19;
-        }
-
-        .btn-sop {
-            background-color: #C17F63;
-            color: white;
-            border: none;
-            padding: 6px 20px;
-            border-radius: 8px;
-            font-size: 14px;
-        }
-
-        .btn-sop:hover {
-            background-color: #9f654d;
-        }
-
-        .modal-content {
-    background-color: #D6DAC9 !important;
-}
-     */
-
 /* ================== SOP SECTION ================== */
 
 .sop-wrapper {
     background-color: #FFF8DF;
     border-radius: 25px;
     padding: 40px 50px;
-    width: 100%;
 }
 
-.sop-wrapper h4 {
-    font-weight: 700;
-    color: #3c2f1e;
-}
-
-/* Kotak Indikator */
+/* Kotak bullet */
 .kotak {
-    width: 20px;
-    height: 20px;
+    width: 14px;
+    height: 14px;
     background-color: #4B2E19;
     border-radius: 4px;
 }
 
-/* Button SOP */
+/* Item SOP */
+.sop-item {
+    padding: 15px 5px;
+    border-bottom: 1px solid #e4d5b8;
+    font-weight: 600;
+    color: #3b2f1e;
+}
+
+/* Hilangkan border terakhir */
+.sop-item:last-child {
+    border-bottom: none;
+}
+
+/* Tombol */
 .btn-sop {
     background-color: #C17F63;
     color: white;
     border: none;
-    padding: 6px 20px;
+    padding: 6px 18px;
     border-radius: 8px;
     font-size: 14px;
     transition: 0.2s;
@@ -410,6 +381,7 @@ form {
 .btn-sop:hover {
     background-color: #9f654d;
 }
+
 
 /* Modal background */
 .modal-content {
@@ -507,13 +479,27 @@ form {
     display: none;
   }
 
-  .hero-title {
-    font-size: 28px;
-  }
+  .hero-section {
+            height: 61vh;
+            margin-top: 0px;
+            margin-bottom: 25px;
+        }
 
-  .hero-subtitle {
-    font-size: 18px;
-  }
+        .hero-content {
+            width: 94%;
+            padding: 18px;
+        }
+
+        .hero-content h1 {
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+        .hero-content p {
+            font-size: 14px;
+            margin-bottom: 18px;
+            padding: 0 20px;
+        }
 
   .section-title {
     font-size: 28px;
@@ -549,4 +535,37 @@ form {
   .social-icon i {
     font-size: 24px;
   }
+
+  .sop-wrapper {
+        padding: 30px 25px;
+    }
+
+    /* Biar layout kolom turun rapi saat layar kecil */
+    .sop-item .col-1,
+    .sop-item .col-7,
+    .sop-item .col-4 {
+        text-align: left !important;
+    }
+
+    .sop-item .col-4 {
+        margin-top: 8px;
+        text-align: left !important;
+    }
+
+    .btn-sop {
+        width: 100%;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .sop-wrapper {
+        padding: 25px 18px;
+    }
+
+    .btn-sop {
+        font-size: 13px;
+        padding: 6px 14px;
+    }
 }
