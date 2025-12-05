@@ -89,6 +89,8 @@ function initArrows() {
 
     setupArrow(testimoniNavRight, testimoniGallery, 'right');
     setupArrow(testimoniNavLeft, testimoniGallery, 'left');
+    console.log("Testimoni Gallery:", document.querySelector('.testimoni-gallery'));
+
 
 }
 

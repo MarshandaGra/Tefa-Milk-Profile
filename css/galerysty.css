@@ -250,7 +250,7 @@ body {
 }
 
 .gallery-navigation {
-    display: flex;
+    display: flex !important;
     justify-content: right;
     gap: 12px;
     margin-top: 20px;
@@ -277,13 +277,28 @@ body {
 /* Testimonial Section - UPDATED FOR SCROLLING */
 /* Efek hover pada card testimoni */
 .review-card {
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-    cursor: pointer;
+    background: #fff;
+    border-radius: 12px;
+    overflow: visible;           /* biarkan elemen absolute (quote) keluar sedikit */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    flex: 0 0 auto;              /* jangan mengecil, jangan mengisi seluruh baris */
+    width: 100%;
+    max-width: 380px;            /* batas lebar kartu */
+    min-width: 280px;            /* lebar minimal saat scroll */
+    display: flex;
+    flex-direction: column;
 }
 
 .review-card:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.review-card .position-relative {
+  position: relative;
+  /* overflow: hidden; */
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 
 /* Membuat gambar juga ikut zoom */
@@ -293,6 +308,26 @@ body {
 
 .review-card:hover img {
     transform: scale(1);
+}
+
+.review-card .top-image {
+  display: block;
+  width: 100%;
+  height: 220px;               /* tinggi tetap supaya card konsisten */
+  object-fit: cover;           /* crop yang rapi */
+  object-position: center;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.testimoni-gallery {
+  display: flex;               /* horizontal layout */
+  gap: 20px;
+  overflow-x: auto;            /* memungkinkan scroll horizontal */
+  scroll-behavior: smooth;
+  padding: 10px 16px;
+  align-items: flex-start;     /* agar card tidak meregang vertikal */
+  box-sizing: border-box;
 }
 
 
@@ -459,7 +494,7 @@ body {
 /* Gambar atas */
 .top-image {
     height: 240px;
-    min-width: 350px;
+    min-width: 356px;
     object-fit: cover;
     border-bottom: #987035 8px solid;
 }
