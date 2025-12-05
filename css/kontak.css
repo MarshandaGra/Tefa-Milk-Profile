@@ -403,7 +403,7 @@ body {
 
 
 /* Responsive */
-@media (max-width: 991px) {
+/* @media (max-width: 991px) {
   .navbar-brand {
     font-size: 24px;
   }
@@ -484,4 +484,99 @@ body {
   .social-icon i {
     font-size: 24px;
   }
+}
+ */
+/* ============================
+   RESPONSIVE MOBILE SUPPORT
+   max-width: 576px
+===============================*/
+@media (max-width: 576px) {
+
+    /* --- HERO SECTION --- */
+    .hero-section {
+        padding: 40px 15px;
+    }
+
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .milk-splash {
+        width: 140px !important;
+        opacity: 0.6;
+    }
+
+    /* --- CONTACT LEFT --- */
+    .contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .contact-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+
+    .contact-label {
+        font-size: 16px;
+    }
+
+    .contact-value a {
+        font-size: 14px;
+    }
+
+    .contact-description {
+        font-size: 14px;
+    }
+    
+    hr.contact-divider {
+        margin: 20px 0;
+    }
+
+    /* --- SOCIAL ICONS --- */
+    .social-icons {
+        display: flex;
+        gap: 12px;
+        justify-content: flex-start;
+    }
+
+    .social-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+
+    /* --- FORM SECTION (KANAN) --- */
+    .form-wrapper {
+        padding: 20px !important;
+    }
+
+    .custom-input,
+    .custom-textarea {
+        font-size: 14px;
+    }
+
+    .rating-stars .star {
+        font-size: 22px;
+        margin-right: 3px;
+    }
+
+    .btn-submit {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    /* --- MAP --- */
+    .map-wrapper iframe {
+        height: 320px !important;
+    }
 }
