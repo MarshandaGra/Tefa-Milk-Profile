@@ -47,7 +47,8 @@
 
 .hero-content h1 {
     font-size: 42px;
-    font-weight: bold;}
+    font-weight: 700;
+}
 
 .hero-content p {
     font-size: 18px;
@@ -130,6 +131,10 @@
         }
 
 /* ===== FAQ ===== */
+body {
+    font-family: "Poppins", sans-serif;
+}
+
 /* Container FAQ */
 .faq-section {
     background-color: #FFF8DF;
@@ -157,8 +162,8 @@
     background: white !important;
     color: black !important;
     font-weight: 600;
-    font-size: 15px;
-    padding: 20px;
+    font-size: 18px;
+    padding: 25px;
     border-radius: 0 !important;
     overflow: hidden;
     box-shadow: none !important;
@@ -204,10 +209,9 @@
 .accordion-body {
     background: #a8bcbc;
     color: white;
-    padding: 16px;
-    font-size: 15px;
-    font-weight: 500;
-    border-radius: 20px 20px;
+    padding: 25px;
+    font-size: 18px;
+    border-radius: 0 0 20px 20px;
 }
 
 
@@ -224,6 +228,7 @@
         padding: 20px;
     }
 }
+
 
 /* ===== Form ===== */
 #form-section {
@@ -284,7 +289,9 @@
 }
 
 .submit-btn:hover {
-  background-color: #E4947D;
+  background-color: #f0baab;
+  color: #fff;
+  transform: scale(1.05);
 }
 /* Mengatur form agar bisa memposisikan tombol */
 form {
@@ -318,6 +325,7 @@ form {
 .profile-btn:hover {
   background-color: #9CAFAB;
   color: #fff;
+  transform: scale(1.05);
 }
 
 /* RESPONSIVE */
@@ -330,38 +338,53 @@ form {
   }
 }
 
+/* ================== SOP SECTION ================== */
 
-/* ===== SOP ===== */
-        .sop-box {
-            max-width: 900px;
-            background-color: #FAEDCE;
-        }
+.sop-wrapper {
+    background-color: #FFF8DF;
+    border-radius: 25px;
+    padding: 40px 50px;
+}
 
-        h4 {
-            font-weight: 700;
-            color: #3c2f1e;
-        }
+/* Kotak bullet */
+.kotak {
+    width: 14px;
+    height: 14px;
+    background-color: #4B2E19;
+    border-radius: 4px;
+}
 
-        .kotak {
-            width: 20px;
-            height: 20px;
-            background-color: #4B2E19;
-        }
+/* Item SOP */
+.sop-item {
+    padding: 15px 5px;
+    border-bottom: 1px solid #e4d5b8;
+    font-weight: 600;
+    color: #3b2f1e;
+}
 
-        .btn-sop {
-            background-color: #C17F63;
-            color: white;
-            border: none;
-            padding: 6px 20px;
-            border-radius: 8px;
-            font-size: 14px;
-        }
+/* Hilangkan border terakhir */
+.sop-item:last-child {
+    border-bottom: none;
+}
 
-        .btn-sop:hover {
-            background-color: #9f654d;
-        }
+/* Tombol */
+.btn-sop {
+    background-color: #C17F63;
+    color: white;
+    border: none;
+    padding: 6px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.2s;
+}
 
-        .modal-content {
+.btn-sop:hover {
+    background-color: #9f654d;
+}
+
+
+/* Modal background */
+.modal-content {
     background-color: #D6DAC9 !important;
 }
 
@@ -387,6 +410,11 @@ form {
             max-width: 420px;
         }
 
+        .email-box:hover {
+            background-color: rgb(211, 228, 148);
+            transform: scale(1.03);
+          }
+
         .email-box .icon {
             background-color: #3C3C3C;
             width: 55px;
@@ -411,86 +439,152 @@ form {
             margin: 0;
             font-size: 16px;
         }
-/* Responsive */
+/* ===========================
+   FIX OVERFLOW GLOBAL
+=========================== */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden !important;
+}
+
+
+/* ===========================
+   RESPONSIVE 991PX
+=========================== */
 @media (max-width: 991px) {
+
   .navbar-brand {
-    font-size: 24px;
+      font-size: 24px;
   }
 
   .navbar-nav .nav-link {
-    font-size: 18px;
+      font-size: 18px;
   }
 
   .hero-title {
-    font-size: 36px;
+      font-size: 36px;
   }
 
   .hero-subtitle {
-    font-size: 20px;
-  }
-
-  .milk-splash {
-    height: 250px;
+      font-size: 20px;
   }
 
   .section-title {
-    font-size: 36px;
+      font-size: 36px;
   }
 
   .contact-heading {
-    font-size: 28px;
+      font-size: 28px;
   }
 
   .form-title {
-    font-size: 28px;
+      font-size: 28px;
   }
 }
 
+
+/* ===========================
+   RESPONSIVE 768PX
+=========================== */
 @media (max-width: 768px) {
+
+  /* Hilangkan splash */
   .milk-splash {
-    display: none;
+      display: none;
   }
 
-  .hero-title {
-    font-size: 28px;
+  /* HERO SECTION */
+  .hero-section {
+      height: 61vh;
+      margin-top: 0;
+      margin-bottom: 25px;
+      padding: 0 10px;
   }
 
-  .hero-subtitle {
-    font-size: 18px;
+  .hero-content {
+      width: 100%;
+      max-width: 100%;
+      padding: 15px;
   }
 
+  .hero-content h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+  }
+
+  .hero-content p {
+      font-size: 14px;
+      margin-bottom: 15px;
+      padding: 0 10px;
+  }
+
+  /* Section title */
   .section-title {
-    font-size: 28px;
+      font-size: 28px;
   }
 
   .contact-heading {
-    font-size: 24px;
+      font-size: 24px;
   }
 
   .contact-description,
   .form-description {
-    font-size: 18px;
+      font-size: 18px;
   }
 
-  .form-title {
-    font-size: 24px;
-  }
-
-  .contact-icon {
-    width: 60px;
-    height: 60px;
-  }
-
-  .contact-icon i {
-    font-size: 24px;
-  }
-
+  .contact-icon,
   .social-icon {
-    width: 60px;
-    height: 60px;
+      width: 60px;
+      height: 60px;
   }
 
+  .contact-icon i,
   .social-icon i {
-    font-size: 24px;
+      font-size: 24px;
+  }
+
+  /* SOP WRAPPER */
+  .sop-wrapper {
+      padding: 25px 20px !important;
+  }
+
+  /* Atur ulang layout SOP agar tidak overflow */
+  .sop-item {
+      margin: 0 !important;
+      padding: 10px 0 !important;
+  }
+
+  .sop-item .col-1,
+  .sop-item .col-7,
+  .sop-item .col-4 {
+      width: 100% !important;
+      flex: 0 0 100% !important;
+      max-width: 100% !important;
+      text-align: left !important;
+  }
+
+  .sop-item .col-4 {
+      margin-top: 10px;
+  }
+
+  .btn-sop {
+      width: 100% !important;
+      margin-top: 8px;
+  }
+}
+
+
+/* ===========================
+   RESPONSIVE 480PX
+=========================== */
+@media (max-width: 480px) {
+
+  .sop-wrapper {
+      padding: 20px 15px !important;
+  }
+
+  .btn-sop {
+      font-size: 13px;
+      padding: 6px 14px;
   }
 }

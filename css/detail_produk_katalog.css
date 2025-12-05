@@ -2,6 +2,11 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
 /* WhatsApp Button */
 .btn-whatsapp {
     background: #dbe5c2;

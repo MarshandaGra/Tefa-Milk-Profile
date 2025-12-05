@@ -1,4 +1,4 @@
-const galleries = document.querySelectorAll('.kegiatan-gallery, .artikel-gallery, .frame');
+const galleries = document.querySelectorAll('.kegiatan-gallery, .artikel-gallery, .testimoni-gallery, .frame');
 
 galleries.forEach(gallery => {
     let isDown = false;
@@ -83,12 +83,12 @@ function initArrows() {
     setupArrow(artikelNavLeft, artikelGallery, 'left');
 
      // --- TESTIMONI TEFA ---
-    const testimonilGallery = document.querySelector('.artikel-gallery');
-    const testimoniNavLeft = document.querySelector('.artikel-nav .left');
-    const testimoniNavRight = document.querySelector('.artikel-nav .right');
+    const testimoniGallery = document.querySelector('.testimoni-gallery');
+    const testimoniNavLeft = document.querySelector('.testimoni-nav .left');
+    const testimoniNavRight = document.querySelector('.testimoni-nav .right');
 
-    setupArrow(artikelNavRight, artikelGallery, 'right');
-    setupArrow(artikelNavLeft, artikelGallery, 'left');
+    setupArrow(testimoniNavRight, testimoniGallery, 'right');
+    setupArrow(testimoniNavLeft, testimoniGallery, 'left');
 
 }
 
@@ -153,31 +153,54 @@ function setupNavigation() {
 }
 
 // "Lihat lebih banyak" functionality for testimonials
-function setupTestimonialReadMore() {
-  const readMoreLinks = document.querySelectorAll('.testimonial-read-more');
+document.addEventListener("DOMContentLoaded", function () {
+    const limit = 40;
 
-  readMoreLinks.forEach(link => {
-    link.style.cursor = 'pointer';
-    
-    link.addEventListener('click', (e) => {
-      const testimonialText = link.previousElementSibling;
-      if (testimonialText && testimonialText.classList.contains('testimonial-text')) {
-        testimonialText.style.maxHeight = 'none';
-        testimonialText.style.overflow = 'visible';
-        testimonialText.style.webkitLineClamp = 'unset';
-        link.style.display = 'none';
-      }
-    });
+    document.querySelectorAll(".testimonial-text").forEach((p) => {
+        let fullText = p.textContent.replace(/\s+/g, " ").trim();
 
-    link.addEventListener('mouseenter', () => {
-      link.style.textDecoration = 'underline';
-    });
+        if (fullText.length <= limit) {
+            p.textContent = fullText;
+            return;
+        }
 
-    link.addEventListener('mouseleave', () => {
-      link.style.textDecoration = 'none';
+        let shortText = fullText.substring(0, limit) + "...";
+
+        p.dataset.full = fullText;
+        p.dataset.short = shortText;
+
+        // Set tampilan awal
+        p.innerHTML = `${shortText}<span class="read-more-btn"> lihat lebih banyak</span>`;
+
+        // FUNCTION untuk re-bind tombol setiap kali innerHTML berubah
+        function bindButton() {
+            const btn = p.querySelector(".read-more-btn");
+
+            btn.addEventListener("click", (e) => {
+                e.stopPropagation();
+
+                const expanded = p.classList.contains("expanded");
+
+                if (expanded) {
+                    // Tutup
+                    p.innerHTML = `${p.dataset.short}<span class="read-more-btn"> lihat lebih banyak</span>`;
+                    p.classList.remove("expanded");
+                } else {
+                    // Buka
+                    p.innerHTML = `${p.dataset.full}<span class="read-more-btn"> sembunyikan</span>`;
+                    p.classList.add("expanded");
+                }
+
+                // Bind ulang tombol setelah isi berubah
+                bindButton();
+            });
+        }
+
+        // Bind awal
+        bindButton();
     });
-  });
-}
+});
+
 
 // Footer social media links
 function setupSocialLinks() {
@@ -324,3 +347,28 @@ if (document.readyState === 'loading') {
   
   console.log('JavaScript loaded successfully!');
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    const limit = 120; // batas karakter, bisa diganti misal 150 / 200
+
+    document.querySelectorAll(".testimonial-text").forEach((p, index) => {
+        const fullText = p.innerText.trim();
+
+        // Jika teks pendek → tidak perlu "lihat lebih banyak"
+        if (fullText.length <= limit) return;
+
+        const shortText = fullText.substring(0, limit) + "...";
+
+        // Simpan data asli
+        p.setAttribute("data-full", fullText);
+        p.innerText = shortText;
+
+        // Tambahkan tombol otomatis
+        const btn = document.createElement("span");
+        btn.className = "read-more-btn";
+        btn.innerText = " lihat lebih banyak";
+        btn.onclick = () => toggleText(p, btn);
+        p.after(btn);
+    });
+});
+

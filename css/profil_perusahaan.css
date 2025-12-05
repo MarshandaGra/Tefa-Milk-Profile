@@ -47,7 +47,7 @@ body {
 }
 
 .hero-content {
-    margin-top: 40px;
+    /* margin-top: px; */
     position: relative;
     z-index: 2;
     text-align: center;
@@ -307,9 +307,21 @@ body {
 .carousel-indicators button.active {
     background-color: #E4947D;
 }
+/* ===================================
+   GLOBAL FIX — HILANGKAN OVERFLOW
+=================================== */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden !important;
+}
 
-/* Tablet dan Mobile (≤ 992px) */
+
+/* ===================================
+   TABLET & SMALL LAPTOP (≤ 992px)
+=================================== */
 @media (max-width: 992px) {
+
+    /* Struktur Organisasi */
     .org-content {
         flex-direction: column;
     }
@@ -330,27 +342,8 @@ body {
     .carousel-control-next {
         right: 10px;
     }
-}
 
-/* Mobile Kecil (≤ 576px) */
-@media (max-width: 576px) {
-    .leader-img {
-        width: 150px;
-        height: 200px;
-    }
-
-    .section-title {
-        font-size: 1.5rem;
-    }
-
-    .org-section {
-        padding: 30px 15px;
-    }
-}
-
-
-/* Responsive */
-@media (max-width: 991px) {
+    /* Navbar & Text */
     .navbar-brand {
         font-size: 24px;
     }
@@ -367,12 +360,8 @@ body {
         font-size: 20px;
     }
 
-    .milk-splash {
-        height: 250px;
-    }
-
     .section-title {
-        font-size: 36px;
+        font-size: 32px;
     }
 
     .contact-heading {
@@ -384,24 +373,49 @@ body {
     }
 }
 
+
+
+/* ===================================
+            MOBILE (≤ 768px)
+=================================== */
 @media (max-width: 768px) {
+
+    /* Hilangkan elemen dekorasi */
     .milk-splash {
         display: none;
     }
 
-    .hero-title {
+    /* HERO */
+    .hero-section {
+        height: 60vh;
+        margin-top: 0;
+        padding: 0 10px;
+    }
+
+    .hero-content {
+        width: 94%;
+        padding: 18px;
+    }
+
+    .hero-content h1 {
         font-size: 28px;
+        margin-bottom: 25px;
     }
 
-    .hero-subtitle {
-        font-size: 18px;
+    .hero-content p {
+        font-size: 14px;
+        margin-bottom: 18px;
+        padding: 0 20px;
     }
 
+    /* Section Title */
     .section-title {
         font-size: 28px;
     }
 
-    .contact-heading {
+    /* Contacts & Forms */
+    .contact-heading,
+    .form-title {
         font-size: 24px;
     }
 
@@ -410,29 +424,18 @@ body {
         font-size: 18px;
     }
 
-    .form-title {
-        font-size: 24px;
-    }
-
-    .contact-icon {
-        width: 60px;
-        height: 60px;
-    }
-
-    .contact-icon i {
-        font-size: 24px;
-    }
-
+    .contact-icon,
     .social-icon {
         width: 60px;
         height: 60px;
     }
 
+    .contact-icon i,
     .social-icon i {
         font-size: 24px;
     }
-}
-@media (max-width: 768px) {
+
+    /* Visi-Misi */
     .vm-container {
         grid-template-columns: 1fr;
     }
@@ -441,21 +444,47 @@ body {
         grid-template-columns: 1fr;
     }
 
+    /* Leadership */
     .leadership {
         flex-direction: column;
         align-items: center;
     }
 
+    /* Padding Section */
     .navbar {
         padding: 15px 20px;
     }
 
     .content-section,
     .org-section {
-        padding: 30px 20px;
+        padding: 0px 20px;
     }
 }
 
+
+
+/* ===================================
+        MOBILE SMALL (≤ 576px)
+=================================== */
+@media (max-width: 576px) {
+
+    /* Foto Leader */
+    .leader-img {
+        width: 150px;
+        height: 200px;
+    }
+
+    /* Judul */
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .org-section {
+        padding: 30px 15px;
+    }
+}
+
+
 /* ===================================
    END OF CSS FILE
-   =================================== */
+=================================== */

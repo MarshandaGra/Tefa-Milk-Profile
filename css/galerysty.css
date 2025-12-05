@@ -1,4 +1,4 @@
-/* body {
+body {
     font-family: 'Poppins', sans-serif, Arial, sans-serif;
     background-color: #faf3d6;
     overflow-x: hidden;
@@ -10,10 +10,10 @@
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
-} */
+}
 
 /* Hero Section */
-.hero-section {
+/* .hero-section {
     position: relative;
     height: 360px;
     background: linear-gradient(
@@ -62,7 +62,8 @@
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     color: #000000;
-    font-size: 2.5rem;
+    font-size: 50px;
+    margin-top: 50px;
     text-shadow: 0px 2px 8px #00000040;
     margin-bottom: 16px;
 }
@@ -71,10 +72,80 @@
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     color: #000000;
-    font-size: 1.2rem;
+    font-size: 18px;
     text-shadow: 0px 2px 15px #00000040;
     line-height: 1.4;
+} */
+
+
+.hero-section {
+    position: relative;
+    height: 61vh; /* sesuai permintaan */
+    min-height: 320px; /* agar HP kecil tidak mepet */
+    background: linear-gradient(
+        180deg,
+        rgba(250, 243, 214, 1) 0%,
+        rgba(255, 213, 128, 1) 31%,
+        rgba(230, 164, 75, 1) 60%,
+        rgba(250, 243, 214, 1) 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
 }
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-ellipse {
+    width: 50%;
+    max-width: 600px;
+    height: 150px;
+    border-radius: 300px / 90px;
+    filter: blur(40px);
+    mix-blend-mode: screen;
+    background: radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(255, 241, 193, 1) 0%,
+        rgba(255, 241, 193, 0) 100%
+    );
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 820px;
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: #000;
+    font-size: 44px;
+    line-height: 1.2;
+    text-shadow: 0px 2px 8px #00000040;
+    margin-bottom: 12px;
+}
+
+.hero-subtitle {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: #000;
+    font-size: 18px;
+    line-height: 1.4;
+    text-shadow: 0px 2px 15px #00000040;
+}
+
 
 /* Sections */
 .section {
@@ -97,15 +168,15 @@
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     color: #000000;
-    font-size: 30px;
+    font-size: 32px;
     text-align: left;
     padding-top: 23px;
 }
 
 .view-more-btn {
-    width: 215px;
+    width: 209px;
     height: 55px;
-    padding: 5px 20px;
+    margin-bottom: 0;
     background-color: #e7a74e;
     border-radius: 25px;
     box-shadow: 0px 2px 5px #00000040;
@@ -180,9 +251,10 @@
 
 .gallery-navigation {
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    justify-content: right;
+    gap: 12px;
     margin-top: 20px;
+    margin-right: 17px;
 }
 
 .nav-arrow {
@@ -203,142 +275,26 @@
 }
 
 /* Testimonial Section - UPDATED FOR SCROLLING */
-.testimoni-container {
-    display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;
-    gap: 32px;
-    padding: 20px 40px;
-    margin: 0 auto;
-    max-width: calc(100% - 40px);
-    scroll-behavior: smooth;
-    cursor: grab;
-    user-select: none;
-    -webkit-overflow-scrolling: touch;
-}
-
-.testimoni-container:active {
-    cursor: grabbing;
-}
-
-.testimoni-container::-webkit-scrollbar {
-    height: 8px;
-}
-
-.testimoni-container::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.05);
-    border-radius: 10px;
-}
-
-.testimoni-container::-webkit-scrollbar-thumb {
-    background: rgba(231, 167, 78, 0.5);
-    border-radius: 10px;
-}
-
-.testimoni-container::-webkit-scrollbar-thumb:hover {
-    background: rgba(231, 167, 78, 0.8);
-}
-
-.testimonial-card {
-    flex-shrink: 0;
-    width: 490px;
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0px 4px 15px #00000040;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.testimonial-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.5);
-}
-
-.testimonial-image {
-    width: 100%;
-    height: 261px;
-    object-fit: cover;
-}
-
-.testimonial-divider {
-    height: 16px;
-    background-color: #987035;
-    width: 100%;
-}
-
-.testimonial-content {
-    padding: 20px;
-    position: relative;
-}
-
-.testimonial-author {
-    font-family: "Poppins", sans-serif;
-    font-weight: 700;
-    color: #000000;
-    font-size: 24px;
-    letter-spacing: 0;
-    line-height: 23px;
-    margin-bottom: 30px;
-}
-
-.testimonial-date {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 79px;
-    opacity: 0.5;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    color: #000000;
-    font-size: 15px;
-    letter-spacing: 0;
-    line-height: 23px;
-    white-space: nowrap;
-}
-
-.testimonial-rating {
-    width: 125px;
-    height: 26px;
-    margin-bottom: 15px;
-}
-
-.testimonial-text {
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    color: #000000;
-    font-size: 16px;
-    letter-spacing: 0;
-    line-height: 23px;
-    margin-bottom: 15px;
-}
-
-.testimonial-read-more {
-    opacity: 0.5;
-    font-family: "Poppins", sans-serif;
-    font-weight: 400;
-    color: #000000;
-    font-size: 16px;
-    letter-spacing: 0;
-    line-height: 23px;
-    white-space: nowrap;
+/* Efek hover pada card testimoni */
+.review-card {
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
     cursor: pointer;
-    transition: opacity 0.3s ease, text-decoration 0.3s ease;
 }
 
-.testimonial-read-more:hover {
-    opacity: 1;
-    text-decoration: underline;
+.review-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
-.testimonial-avatar {
-    position: absolute;
-    top: -16px;
-    left: 20px;
-    width: 60px;
-    height: 56px;
-    background-color: #e0e0e0;
-    border-radius: 50%;
+/* Membuat gambar juga ikut zoom */
+.review-card img {
+    transition: transform 0.4s ease;
 }
+
+.review-card:hover img {
+    transform: scale(1);
+}
+
 
 /* Responsive */
 @media (max-width: 991px) {
@@ -376,50 +332,164 @@
 }
 
 @media (max-width: 768px) {
-  .milk-splash {
-    display: none;
-  }
+    .hero-section {
+        height: 61vh; /* tetap 61vh */
+        min-height: 300px;
+        padding: 20px 10px;
+    }
 
-  .hero-title {
-    font-size: 28px;
-  }
+    .hero-title {
+        font-size: 42px;
+        margin-top: 10px;
+    }
 
-  .hero-subtitle {
-    font-size: 18px;
-  }
+    .hero-subtitle {
+        font-size: 18px;
+        margin-top: 5px;
+    }
 
-  .section-title {
-    font-size: 28px;
-  }
-
-  .contact-heading {
-    font-size: 24px;
-  }
-
-  .contact-description,
-  .form-description {
-    font-size: 18px;
-  }
-
-  .form-title {
-    font-size: 24px;
-  }
-
-  .contact-icon {
-    width: 60px;
-    height: 60px;
-  }
-
-  .contact-icon i {
-    font-size: 24px;
-  }
-
-  .social-icon {
-    width: 60px;
-    height: 60px;
-  }
-
-  .social-icon i {
-    font-size:24px;
+    .hero-ellipse {
+        width: 80%;
+        height: 120px;
+        filter: blur(35px);
+    }
 }
+
+/* HP kecil */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 24px;
+    }
+
+    .hero-subtitle {
+        font-size: 13px;
+    }
+
+    .hero-ellipse {
+        width: 90%;
+        height: 100px;
+        filter: blur(30px);
+    }
+}
+
+/* === MOBILE FIXES === */
+@media (max-width: 576px) {
+    .hero-section {
+        height: 260px;
+        padding: 20px 10px;
+    }
+
+    .hero-title {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+
+    .hero-subtitle {
+        font-size: 14px;
+    }
+
+    /* Gallery item adjust for small phone width */
+    .gallery-container {
+        gap: 16px;
+        padding: 10px 15px;
+    }
+
+    .gallery-item {
+        width: 260px;
+        height: 160px;
+        border-radius: 10px;
+    }
+
+    .section-header {
+        padding: 0 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .section-title {
+        font-size: 22px;
+        padding-top: 5px;
+    }
+
+    .view-more-btn {
+        width: 160px;
+        height: 45px;
+        font-size: 18px;
+        border-radius: 18px;
+    }
+
+    /* Navigation arrows smaller */
+    .gallery-navigation {
+        justify-content: center;
+        margin-right: 0;
+    }
+
+    .nav-arrow {
+        width: 38px;
+        height: 38px;
+    }
+
+    /* Testimonial Cards */
+    .review-card {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .top-image {
+        width: 100%;
+        height: 180px;
+    }
+
+    .quote-circle {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+        bottom: -15px;
+    }
+}
+
+
+.review-card {
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fff;
+}
+
+/* Gambar atas */
+.top-image {
+    height: 240px;
+    min-width: 350px;
+    object-fit: cover;
+    border-bottom: #987035 8px solid;
+}
+
+/* Lingkaran quote */
+.quote-circle {
+    position: absolute;
+    bottom: -20px;
+    left: 20px;
+    background: #FFCC66;
+    color: #2c2c2c;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+/* Clamp text (3 baris) */
+.clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Stars margin */
+.stars i {
+    margin-right: 1px;
 }
