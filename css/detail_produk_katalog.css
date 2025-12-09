@@ -41,3 +41,18 @@ body {
     font-weight: 600;
 }
 
+/* PRODUK TERKAIT — 2 kolom untuk layar 768px–899px */
+@media (max-width: 899px) {
+    #produk-terkait .col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+/* PRODUK TERKAIT — 1 kolom untuk hp kecil */
+@media (max-width: 576px) {
+    #produk-terkait .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

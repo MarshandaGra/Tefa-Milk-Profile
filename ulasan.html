@@ -148,8 +148,20 @@
             margin-left: 4px;    /* jarak kecil setelah teks */
         }
 
+        @media (max-width: 900px) {
+            .container .row .col-md-4 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
 
-
+        /* ULASAN → di HP tampil 1 kolom */
+        @media (max-width: 576px) {
+            .container .row .col-md-4 {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
