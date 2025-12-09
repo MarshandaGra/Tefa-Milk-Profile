@@ -59,6 +59,15 @@ document.getElementById("sendWA").addEventListener("click", function () {
 
     const nomorWa = "6287729664976";
 
+    // ====== VALIDASI EMAIL ======
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    if (!emailPattern.test(email)) {
+        alert("Email tidak valid! Mohon masukkan email yang benar.");
+        return;
+    }
+
+    // VALIDASI FORM LAIN
     if (!nama || !email || !ulasan || ratingStars == 0) {
         alert("Mohon lengkapi semua data dan beri rating terlebih dahulu.");
         return;
@@ -75,17 +84,16 @@ Ulasan:
 ${ulasan}`;
 
     window.open(`https://wa.me/${nomorWa}?text=${encodeURIComponent(pesan)}`, "_blank");
-});
 
     // Reset form setelah kirim
     document.getElementById("contactForm").reset();
     document.getElementById('ratingValue').value = '0';
-
     document.querySelectorAll('.rating-stars .star').forEach(s => {
         s.classList.remove('active');
         s.style.color = '#ddd';
     });
 
+});
 
 
 // Smooth scroll
