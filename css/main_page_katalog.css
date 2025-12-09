@@ -159,12 +159,32 @@ body {
    RESPONSIVE
    ============================= */
 
-@media (min-width: 992px) {
+@media (max-width: 992px) {
     .filter-wrapper {
         justify-content: center; /* RAPI DI TENGAH SAAT DESKTOP */
         overflow-x: visible;     /* Tidak perlu scroll di desktop */
         white-space: normal;     /* Biar tidak memanjang */
         flex-wrap: wrap;         /* Jika panjang, bisa turun ke baris baru */
+    }
+
+    .product-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom */
+        gap: 20px;
+    }
+
+    .product-card {
+        width: 100%;
+    }
+
+    .product-card img {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    #katalog .product-card {
+        flex: 0 0 50%;
+        max-width: 50%;
     }
 }
 
@@ -233,6 +253,13 @@ body {
         transform: scale(1.05);
         color: #fff;
         font-weight: 600;
+    }
+}
+
+@media (max-width: 576px) {
+    #katalog .product-card {
+        flex: 0 0 100%;
+        max-width: 100%;
     }
 }
 
